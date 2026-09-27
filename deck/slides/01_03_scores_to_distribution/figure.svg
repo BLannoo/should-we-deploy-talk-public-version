@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+  font-family="Inter, sans-serif"
+  height="855"
+  id="svg1"
+  viewBox="0 0 1520 855"
+  width="1520">
+  <sodipodi:namedview
+    inkscape:cx="760.0"
+    inkscape:cy="427.5"
+    inkscape:window-height="1080"
+    inkscape:window-maximized="1"
+    inkscape:window-width="1920"
+    inkscape:window-x="0"
+    inkscape:window-y="0"
+    inkscape:zoom="0.7"
+    id="namedview1"
+    showgrid="false" />
+  <!--02_01 - From a column of per-example scores to a score distribution. Left: sample
+    table; right: histogram + light-purple normal overlay; grey arrow between. Histogram
+    bars + overlay geometry: scratch/gen_bell.py (same Catmull-Rom method as gen_curve.py).
+    Style tokens = CSS classes with literal colours (NOT var(): Inkscape 1.4.4 ignores custom
+    properties). Every element carries a stable id so Inkscape auto-names nothing on save.-->
+  <defs id="defs1">
+    <style id="style1">
+      .fig    { font-family: Inter, sans-serif; }
+      .bg     { fill: #ffffff; }
+      text    { fill: #14203a; }
+      .ptitle { font-size: 28px; font-weight: 800; letter-spacing: 0.3px; }
+      .tcontainer { fill: #ffffff; stroke: #d5dae6; stroke-width: 2; }
+      .theader { fill: #eef1f7; stroke: none; }
+      .thtext  { font-size: 20px; font-weight: 800; letter-spacing: 0.4px; }
+      .cell    { font-size: 22px; font-weight: 600; }
+      .cellid  { font-size: 20px; font-weight: 500; fill: #6b7686; }
+      .rowsep  { stroke: #e6e9f0; stroke-width: 1.5; }
+      .headsep { stroke: #c9cfda; stroke-width: 2; fill: none; }
+      .c-pur   { fill: #5b2d90; }
+      .tsum    { font-size: 15px; font-weight: 500; fill: #6b7686; }
+      .tsumval { font-size: 19px; font-weight: 700; }
+      .arrow   { fill: #7a8494; stroke: none; }
+      .axis    { stroke: #14203a; stroke-width: 3; fill: none; }
+      .grid    { stroke: #b9c0cc; stroke-width: 1.8; stroke-dasharray: 7 8; fill: none; }
+      .bar     { fill: #5b2d90; fill-opacity: 0.45; stroke: #5b2d90; stroke-width: 2; }
+      .overlay { stroke: #9a86e0; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .tick    { font-size: 24px; font-weight: 600; }
+      .axislbl { font-size: 25px; font-weight: 700; }
+      .cobox   { fill: #faf8fd; stroke: #c3b3e8; stroke-width: 1.5; }
+      .cotext  { font-size: 17px; font-weight: 600; fill: #7a63cf; }
+    </style>
+    <marker id="ah-ink" markerHeight="8" markerWidth="8" orient="auto-start-reverse" refX="8" refY="5" viewBox="0 0 10 10">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#14203a" id="ah-ink-p" />
+    </marker>
+  </defs>
+  <g class="fig" id="fig">
+    <rect class="bg" height="855" id="bg" width="1520" x="0" y="0" />
+    <g id="left">
+      <text class="ptitle" id="title" text-anchor="middle" x="760" y="60">From scores to a distribution</text>
+      <rect class="tcontainer" height="638" id="tbox" rx="16" width="560" x="70" y="150" />
+      <path class="theader" d="M 86 150 h 528 a 16 16 0 0 1 16 16 v 42 h -560 v -42 a 16 16 0 0 1 16 -16 z" id="theader" />
+      <path class="headsep" d="M 70 208 L 630 208" id="headsep" />
+      <g id="rowseps">
+        <line class="rowsep" id="rs-1" x1="70" x2="630" y1="266" y2="266" />
+        <line class="rowsep" id="rs-2" x1="70" x2="630" y1="324" y2="324" />
+        <line class="rowsep" id="rs-3" x1="70" x2="630" y1="382" y2="382" />
+        <line class="rowsep" id="rs-4" x1="70" x2="630" y1="440" y2="440" />
+        <line class="rowsep" id="rs-5" x1="70" x2="630" y1="498" y2="498" />
+        <line class="rowsep" id="rs-6" x1="70" x2="630" y1="556" y2="556" />
+        <line class="rowsep" id="rs-7" x1="70" x2="630" y1="614" y2="614" />
+        <line class="rowsep" id="rs-8" x1="70" x2="630" y1="672" y2="672" />
+      </g>
+      <path class="headsep" d="M 70 730 L 630 730" id="sumsep" />
+      <text class="tsum" id="sumlbl" text-anchor="middle" x="210" y="764">mean</text>
+      <text class="tsumval c-pur" id="sumval" text-anchor="middle" x="490" y="764">70.0</text>
+      <text class="thtext" id="th1" text-anchor="middle" x="210" y="187">Example ID (i)</text>
+      <text class="thtext c-pur" id="th2" text-anchor="middle" x="490" y="187">SUT Score (0–100)</text>
+      <g id="col1" text-anchor="middle">
+        <text class="cellid" id="c1-1" x="210" y="245">1</text>
+        <text class="cellid" id="c1-2" x="210" y="303">2</text>
+        <text class="cellid" id="c1-3" x="210" y="361">3</text>
+        <text class="cellid" id="c1-4" x="210" y="419">4</text>
+        <text class="cellid" id="c1-5" x="210" y="477">5</text>
+        <text class="cellid" id="c1-6" x="210" y="535">…</text>
+        <text xml:space="preserve" class="cellid" id="c1-7" x="210" y="593">N − 2</text>
+        <text xml:space="preserve" class="cellid" id="c1-8" x="210" y="651">N − 1</text>
+        <text xml:space="preserve" class="cellid" id="c1-9" x="210" y="709">N</text>
+      </g>
+      <g id="col2" text-anchor="middle">
+        <text class="cell c-pur" id="c2-1" x="490" y="245">82.1</text>
+        <text class="cell c-pur" id="c2-2" x="490" y="303">67.3</text>
+        <text class="cell c-pur" id="c2-3" x="490" y="361">77.8</text>
+        <text class="cell c-pur" id="c2-4" x="490" y="419">91.6</text>
+        <text class="cell c-pur" id="c2-5" x="490" y="477">61.4</text>
+        <text class="cell c-pur" id="c2-6" x="490" y="535">…</text>
+        <text class="cell c-pur" id="c2-7" x="490" y="593">45.2</text>
+        <text class="cell c-pur" id="c2-8" x="490" y="651">72.9</text>
+        <text class="cell c-pur" id="c2-9" x="490" y="709">88.7</text>
+      </g>
+    </g>
+    <path class="arrow" d="M 655 415 H 710 V 398 L 748 430 L 710 462 V 445 H 655 Z" id="big-arrow" />
+    <g id="right">
+      <g id="grids">
+        <line class="grid" id="grid-25" x1="987.5" x2="987.5" y1="678" y2="180" />
+        <line class="grid" id="grid-50" x1="1145" x2="1145" y1="678" y2="180" />
+        <line class="grid" id="grid-75" x1="1302.5" x2="1302.5" y1="678" y2="180" />
+      </g>
+      <g id="bars">
+        <rect class="bar" height="26.9" id="bar-0" width="23.2" x="1107.2" y="653.1" />
+        <rect class="bar" height="80.6" id="bar-1" width="23.2" x="1132.4" y="599.4" />
+        <rect class="bar" height="99.49" id="bar-2" width="23.2" x="1157.6" y="580.51" />
+        <rect class="bar" height="236.89" id="bar-3" width="23.2" x="1182.8" y="443.11" />
+        <rect class="bar" height="259.9" id="bar-4" width="23.2" x="1208" y="420.1" />
+        <rect class="bar" height="408.37" id="bar-5" width="23.2" x="1233.2" y="271.63" />
+        <rect class="bar" height="422.32" id="bar-6" width="23.2" x="1258.4" y="257.68" />
+        <rect class="bar" height="386.75" id="bar-7" width="23.2" x="1283.6" y="293.25" />
+        <rect class="bar" height="295.6" id="bar-8" width="23.2" x="1308.8" y="384.4" />
+        <rect class="bar" height="241.9" id="bar-9" width="23.2" x="1334" y="438.1" />
+        <rect class="bar" height="126.72" id="bar-10" width="23.2" x="1359.2" y="553.28" />
+        <rect class="bar" height="66.18" id="bar-11" width="23.2" x="1384.4" y="613.82" />
+        <rect class="bar" height="15.52" id="bar-12" width="23.2" x="1409.6" y="664.48" />
+      </g>
+      <path
+        class="overlay"
+        d="M 1044.2 679.34 C 1049.6 678.84 1065.8 678.84 1076.6 676.32 C 1087.4 673.8 1098.2 672.26 1109 664.24 C 1119.8 656.21 1130.6 647.35 1141.4 628.18 C 1152.2 609 1163 582.8 1173.8 549.21 C 1184.6 515.62 1195.4 467.63 1206.2 426.64 C 1217 385.65 1227.8 332.71 1238.6 303.27 C 1249.4 273.83 1260.2 250 1271 250 C 1281.8 250 1292.6 273.83 1303.4 303.27 C 1314.2 332.71 1325 385.65 1335.8 426.64 C 1346.6 467.63 1357.4 515.62 1368.2 549.21 C 1379 582.8 1389.8 609 1400.6 628.18 C 1411.4 647.35 1422.2 656.21 1433 664.24 C 1443.8 672.26 1454.6 673.8 1465.4 676.32 C 1476.2 678.84 1492.4 678.84 1497.8 679.34"
+        id="overlay" />
+      <line class="axis" id="x-axis" marker-end="url(#ah-ink)" x1="820" x2="1470" y1="680" y2="680" />
+      <line class="axis" id="y-axis" marker-end="url(#ah-ink)" x1="820" x2="820" y1="685" y2="150" />
+      <g id="xticks" text-anchor="middle">
+        <text class="tick" id="xt-0" x="830" y="714">0</text>
+        <text class="tick" id="xt-25" x="987.5" y="714">25</text>
+        <text class="tick" id="xt-50" x="1145" y="714">50</text>
+        <text class="tick" id="xt-75" x="1302.5" y="714">75</text>
+        <text class="tick" id="xt-100" x="1460" y="714">100</text>
+      </g>
+      <text class="tick" id="y-zero" text-anchor="end" x="805" y="688">0</text>
+      <text class="axislbl" id="y-label" text-anchor="middle" transform="rotate(-90 782 430)" x="782" y="430">Number of examples / density</text>
+      <g id="normalisation-callout">
+        <rect class="cobox" height="50" id="co-box" rx="10" width="248" x="976" y="226" />
+        <text class="cotext" id="co-l1" text-anchor="middle" x="1100" y="257">Area under the curve = 1</text>
+      </g>
+      <text class="axislbl" id="x-label" text-anchor="middle" x="1145" y="762">SUT Score (0–100)</text>
+    </g>
+  </g>
+</svg>

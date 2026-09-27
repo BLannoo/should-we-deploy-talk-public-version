@@ -1,0 +1,75 @@
+name: Deploy to Pages
+
+# Publishes the deck so anyone can read it in a browser: no clone, no Node, no login.
+# That is the whole point — most of the audience has a phone and a few minutes, not a
+# terminal, and the QR on the closing slide points here.
+#
+# THE ONE THING THAT BREAKS THIS: `--base`. A project Pages site is served from
+# /<repo>/, not /, so a build made for the root emits absolute asset paths and every one
+# of them 404s. The page loads, the deck does not, and nothing in the build complains.
+# The path below must match the repository name exactly.
+#
+# This file is generated from the authoring repo, like everything else here. Editing it
+# in this repo is overwritten by the next export.
+
+on:
+  push:
+    branches: [main]
+    paths: ["deck/**", ".github/workflows/pages.yml"]
+  workflow_dispatch:
+
+# The minimum the deploy needs, and nothing more.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deploy at a time, and never cancel one midway: a half-applied deploy would leave
+# the site serving a mix of two builds.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: deck
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: deck/package-lock.json
+
+      - run: npm ci
+
+      - name: Build the deck for the Pages subpath
+        run: npm run build -- --base /should-we-deploy-talk-public-version/
+
+      - name: Fail if the build emitted root-absolute asset paths
+        # Cheap guard against the base being wrong or dropped: with the base applied,
+        # index.html must reference assets under the repo subpath. Without it the site
+        # renders blank and the only symptom is a browser console nobody is watching.
+        run: |
+          if ! grep -q '/should-we-deploy-talk-public-version/assets/' dist/index.html; then
+            echo "::error::built index.html has no subpath asset references — --base did not apply"
+            exit 1
+          fi
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: deck/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

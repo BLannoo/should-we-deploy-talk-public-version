@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+  font-family="Inter, sans-serif"
+  height="736"
+  id="svg1"
+  viewBox="0 0 1520 736"
+  width="1520">
+  <sodipodi:namedview
+    inkscape:cx="760.0"
+    inkscape:cy="368.0"
+    inkscape:window-height="1080"
+    inkscape:window-maximized="1"
+    inkscape:window-width="1920"
+    inkscape:window-x="0"
+    inkscape:window-y="0"
+    inkscape:zoom="0.7"
+    id="namedview1"
+    showgrid="false" />
+  <defs id="defs1">
+    <style id="style1">
+      .fig { font-family: Inter, sans-serif; }
+      .bg { fill: #ffffff; }
+      .rbox { fill: #14203a; fill-opacity: 0.035; stroke: none; }
+      .gbox { fill: #14203a; fill-opacity: 0.035; stroke: none; }
+      .pill { fill: #ffffff; stroke: #d5dae6; stroke-width: 2; }
+      .card { fill: #ffffff; stroke: #d5dae6; stroke-width: 2; }
+      .pax { stroke: #14203a; stroke-width: 2.5; fill: none; }
+      .title { font-size: 25px; font-weight: 700; }
+      .dens { font-size: 20px; font-weight: 600; fill: #14203a; }
+      .brace { fill: none; stroke-width: 3; }
+      .brace-red { stroke: #d32f2f; }
+      .brace-ink { stroke: #6b7686; }
+      .brace-blue { stroke: #1f4fd6; }
+      .brace-green { stroke: #1b7f3b; }
+      .c-grey { fill: #6b7686; }
+      .verdict { font-size: 27px; font-weight: 700; }
+      .verdictp { font-size: 23px; font-weight: 400; fill: #14203a; }
+      .badge { fill: #ffffff; stroke-width: 3.5; }
+      .badge-sym { font-size: 34px; font-weight: 800; }
+      .dep { font-size: 27px; font-weight: 700; }
+      .depsub { font-size: 21px; font-weight: 400; fill: #14203a; }
+      .note { font-size: 25px; font-weight: 700; }
+      .leg { font-size: 25px; font-weight: 700; }
+      .legsub { font-size: 22px; font-weight: 400; }
+      .c-red { fill: #d32f2f; }
+      .c-blue { fill: #1f4fd6; }
+      .c-green { fill: #1b7f3b; }
+      .c-pur { fill: #5b2d90; }
+      .c-org { fill: #e8541f; }
+      text { fill: #14203a; }
+      .tick { stroke: #14203a; stroke-width: 2; fill: none; }
+      .ticklbl { font-size: 16px; font-weight: 500; }
+      .axislbl { font-size: 17px; font-weight: 700; }
+      .refband { fill: #5b2d90; fill-opacity: 0.10; stroke: none; }
+      .refedge { stroke: #5b2d90; stroke-width: 2; stroke-dasharray: 7 6; fill: none; }
+      .reflbl { font-size: 14px; font-weight: 600; fill: #5b2d90; }
+      .bar-a { stroke: #5b2d90; stroke-width: 3; fill: none; }
+      .bar-o { stroke: #e8541f; stroke-width: 3; fill: none; }
+      .barsep { stroke: #d5dae6; stroke-width: 1.5; fill: none; }
+      .dot-a { fill: #5b2d90; }
+      .dot-o { fill: #e8541f; }
+      .pcap { font-size: 15px; font-weight: 600; }
+      .ptag { font-size: 11.5px; font-weight: 800; fill: #1f4fd6; letter-spacing: 1.6px; }
+      .curve-a { stroke: #5b2d90; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .curve-o { stroke: #e8541f; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .area-a { fill: #5b2d90; fill-opacity: 0.12; stroke: none; }
+      .area-o { fill: #e8541f; fill-opacity: 0.12; stroke: none; }
+      .mean-a { stroke: #5b2d90; stroke-width: 2.5; stroke-dasharray: 6 6; fill: none; }
+      .mean-o { stroke: #e8541f; stroke-width: 2.5; stroke-dasharray: 6 6; fill: none; }
+      .qmark { font-size: 24px; font-weight: 800; fill: #1f4fd6; }
+      .fires { font-size: 12px; font-weight: 600; fill: #6b7686; }
+    </style>
+    <marker id="ah-ink" markerHeight="7" markerWidth="7" orient="auto-start-reverse" refX="9" refY="5" viewBox="0 0 10 10">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#14203a" id="ah-ink-p" />
+    </marker>
+  </defs>
+  <g class="fig" id="fig" transform="translate(0 -146)">
+    <rect class="bg" height="736" id="bg" width="1520" x="0" y="146" />
+    <rect class="card" height="282" id="b2-box" rx="16" width="1496" x="12" y="158" />
+    <text xml:space="preserve" class="title" id="b2-title" text-anchor="middle" x="760" y="188">Add a statistical perspective: every score is an estimate — let’s add error bars.</text>
+    <rect class="refband" height="160" id="b2-refband" width="351" x="224.5" y="210" />
+    <path class="refedge" d="M 224.5 210 L 224.5 370" id="b2-refedge-l" />
+    <path class="refedge" d="M 575.5 210 L 575.5 370" id="b2-refedge-r" />
+    <path class="refedge" d="M 575.5 220 L 589.5 220" id="b2-refleader" />
+    <text xml:space="preserve" class="reflbl" id="b2-reflbl" x="595.5" y="225">the current SUT’s 95% interval</text>
+    <path class="bar-a" d="M 224.5 228 L 575.5 228 M 224.5 219 L 224.5 237 M 575.5 219 L 575.5 237" id="b2-bar1" />
+    <circle class="dot-a" cx="400" cy="228" id="b2-dot1" r="8" />
+    <path class="bar-o" d="M 157 254 L 769 254 M 157 245 L 157 263 M 769 245 L 769 263" id="b2-bar2" />
+    <circle class="dot-o" cx="463" cy="254" id="b2-dot2" r="8" />
+    <path class="bar-o" d="M 319 280 L 931 280 M 319 271 L 319 289 M 931 271 L 931 289" id="b2-bar3" />
+    <circle class="dot-o" cx="625" cy="280" id="b2-dot3" r="8" />
+    <path class="bar-o" d="M 445 306 L 625 306 M 445 297 L 445 315 M 625 297 L 625 315" id="b2-bar4" />
+    <circle class="dot-o" cx="535" cy="306" id="b2-dot4" r="8" />
+    <path class="bar-o" d="M 508 332 L 1120 332 M 508 323 L 508 341 M 1120 323 L 1120 341" id="b2-bar5" />
+    <circle class="dot-o" cx="814" cy="332" id="b2-dot5" r="8" />
+    <path class="bar-o" d="M 688 358 L 1300 358 M 688 349 L 688 367 M 1300 349 L 1300 367" id="b2-bar6" />
+    <circle class="dot-o" cx="994" cy="358" id="b2-dot6" r="8" />
+    <line class="pax" id="b2-axis" marker-end="url(#ah-ink)" x1="40" x2="1486" y1="370" y2="370" />
+    <path class="tick" d="M 40 370 L 40 378" id="b2-tk76" />
+    <text xml:space="preserve" class="ticklbl" id="b2-tl76" text-anchor="middle" x="40" y="396">76</text>
+    <path class="tick" d="M 220 370 L 220 378" id="b2-tk78" />
+    <text xml:space="preserve" class="ticklbl" id="b2-tl78" text-anchor="middle" x="220" y="396">78</text>
+    <path class="tick" d="M 400 370 L 400 378" id="b2-tk80" />
+    <text xml:space="preserve" class="ticklbl" id="b2-tl80" text-anchor="middle" x="400" y="396">80</text>
+    <path class="tick" d="M 580 370 L 580 378" id="b2-tk82" />
+    <text xml:space="preserve" class="ticklbl" id="b2-tl82" text-anchor="middle" x="580" y="396">82</text>
+    <path class="tick" d="M 760 370 L 760 378" id="b2-tk84" />
+    <text xml:space="preserve" class="ticklbl" id="b2-tl84" text-anchor="middle" x="760" y="396">84</text>
+    <path class="tick" d="M 940 370 L 940 378" id="b2-tk86" />
+    <text xml:space="preserve" class="ticklbl" id="b2-tl86" text-anchor="middle" x="940" y="396">86</text>
+    <path class="tick" d="M 1120 370 L 1120 378" id="b2-tk88" />
+    <text xml:space="preserve" class="ticklbl" id="b2-tl88" text-anchor="middle" x="1120" y="396">88</text>
+    <path class="tick" d="M 1300 370 L 1300 378" id="b2-tk90" />
+    <text xml:space="preserve" class="ticklbl" id="b2-tl90" text-anchor="middle" x="1300" y="396">90</text>
+    <path class="tick" d="M 1480 370 L 1480 378" id="b2-tk92" />
+    <text xml:space="preserve" class="ticklbl" id="b2-tl92" text-anchor="middle" x="1480" y="396">92</text>
+    <text xml:space="preserve" class="axislbl" id="b2-axlbl" text-anchor="middle" x="760" y="418">Mean score</text>
+    <g id="b3-band" transform="translate(0 16)">
+      <rect class="rbox" height="68" id="b3-wash" rx="24" width="1496" x="12" y="432" />
+      <text xml:space="preserve" class="title" id="b3-glbl" text-anchor="middle" x="760" y="462">there are 3 rules one thinks of quite quickly</text>
+      <path
+        class="brace brace-ink"
+        d="M 321.6 494.0 Q 321.6 482.0 337.6 482.0 L 744.0 482.0 Q 760.0 482.0 760.0 470.0 Q 760.0 482.0 776.0 482.0 L 1182.4 482.0 Q 1198.4 482.0 1198.4 494.0"
+        id="b3-brace" />
+      <rect class="card" height="186" id="b3-card1" rx="16" width="281.6" x="24" y="566" />
+      <text xml:space="preserve" class="pcap" id="b3-cap1" text-anchor="middle" x="164.8" y="542">each mean inside the other’s</text>
+      <line class="pax" id="b3-ax1" marker-end="url(#ah-ink)" x1="50" x2="299.6" y1="650" y2="650" />
+      <line class="pax" id="b3-ay1" x1="50" x2="50" y1="650" y2="578" />
+      <path
+        class="area-a"
+        d="M 124.67 642.94 C 126.11 641.39 130.45 637.43 133.34 633.64 C 136.23 629.84 139.12 624.58 142.01 620.18 C 144.9 615.78 147.79 610.31 150.68 607.25 C 153.57 604.18 156.46 601.79 159.35 601.79 C 162.24 601.79 165.13 604.18 168.02 607.25 C 170.91 610.31 173.8 615.78 176.69 620.18 C 179.58 624.58 182.47 629.84 185.36 633.64 C 188.25 637.43 192.59 641.39 194.03 642.94 L 194.03 650 L 124.67 650 Z"
+        id="b3-area1a" />
+      <path
+        class="curve-a"
+        d="M 113.35 648.36 C 114.53 647.92 118.06 647.03 120.42 645.71 C 122.78 644.4 125.14 642.76 127.5 640.46 C 129.86 638.16 132.22 635.19 134.58 631.91 C 136.94 628.63 139.3 624.46 141.66 620.76 C 144.02 617.07 146.37 612.74 148.73 609.74 C 151.09 606.73 153.45 603.91 155.81 602.75 C 158.17 601.59 160.53 601.59 162.89 602.75 C 165.25 603.91 167.61 606.73 169.97 609.74 C 172.33 612.74 174.69 617.07 177.04 620.76 C 179.4 624.46 181.76 628.63 184.12 631.91 C 186.48 635.19 188.84 638.16 191.2 640.46 C 193.56 642.76 195.92 644.4 198.28 645.71 C 200.64 647.03 204.18 647.92 205.36 648.36"
+        id="b3-curve1a" />
+      <path class="mean-a" d="M 159.35 706 L 159.35 601.79" id="b3-mean1a" />
+      <path
+        class="area-o"
+        d="M 111.33 645.95 C 113.85 645.06 121.41 642.79 126.45 640.62 C 131.49 638.44 136.53 635.42 141.57 632.9 C 146.6 630.37 151.64 627.24 156.68 625.48 C 161.72 623.72 166.76 622.35 171.8 622.35 C 176.84 622.35 181.88 623.72 186.92 625.48 C 191.96 627.24 197 630.37 202.03 632.9 C 207.07 635.42 212.11 638.44 217.15 640.62 C 222.19 642.79 229.75 645.06 232.27 645.95 L 232.27 650 L 111.33 650 Z"
+        id="b3-area1o" />
+      <path
+        class="curve-o"
+        d="M 91.59 649.06 C 93.64 648.81 99.81 648.3 103.93 647.54 C 108.04 646.79 112.15 645.85 116.27 644.53 C 120.38 643.21 124.49 641.51 128.61 639.62 C 132.72 637.74 136.83 635.35 140.95 633.23 C 145.06 631.11 149.18 628.63 153.29 626.91 C 157.4 625.19 161.52 623.57 165.63 622.9 C 169.74 622.23 173.86 622.23 177.97 622.9 C 182.08 623.57 186.2 625.19 190.31 626.91 C 194.42 628.63 198.54 631.11 202.65 633.23 C 206.77 635.35 210.88 637.74 214.99 639.62 C 219.11 641.51 223.22 643.21 227.33 644.53 C 231.45 645.85 235.56 646.79 239.67 647.54 C 243.79 648.3 249.96 648.81 252.01 649.06"
+        id="b3-curve1o" />
+      <path class="mean-o" d="M 171.8 706 L 171.8 622.35" id="b3-mean1o" />
+      <path class="barsep" d="M 50 664 L 293.6 664" id="b3-barsep1" />
+      <path class="bar-a" d="M 124.67 680 L 194.03 680 M 124.67 674 L 124.67 686 M 194.03 674 L 194.03 686" id="b3-bar1a" />
+      <circle class="dot-a" cx="159.35" cy="680" id="b3-bardot1a" r="5" />
+      <path class="bar-o" d="M 111.33 700 L 232.27 700 M 111.33 694 L 111.33 706 M 232.27 694 L 232.27 706" id="b3-bar1o" />
+      <circle class="dot-o" cx="171.8" cy="700" id="b3-bardot1o" r="5" />
+      <text xml:space="preserve" class="fires" id="b3-fires1" text-anchor="middle" x="164.8" y="748">no rule says “different”</text>
+      <rect class="card" height="186" id="b3-card2" rx="16" width="281.6" x="321.6" y="566" />
+      <text xml:space="preserve" class="ptag" id="b3-tag2" text-anchor="middle" x="462.4" y="522">RULE 1</text>
+      <text xml:space="preserve" class="pcap" id="b3-cap2" text-anchor="middle" x="462.4" y="542"><tspan xml:space="preserve" class="c-org">new</tspan> mean outside <tspan
+          xml:space="preserve"
+          class="c-pur">current’s</tspan></text>
+      <line class="pax" id="b3-ax2" marker-end="url(#ah-ink)" x1="347.6" x2="597.2" y1="650" y2="650" />
+      <line class="pax" id="b3-ay2" x1="347.6" x2="347.6" y1="650" y2="578" />
+      <path
+        class="area-a"
+        d="M 395.38 642.94 C 396.83 641.39 401.16 637.43 404.05 633.64 C 406.94 629.84 409.83 624.58 412.72 620.18 C 415.61 615.78 418.5 610.31 421.39 607.25 C 424.28 604.18 427.17 601.79 430.06 601.79 C 432.95 601.79 435.84 604.18 438.73 607.25 C 441.62 610.31 444.51 615.78 447.4 620.18 C 450.29 624.58 453.18 629.84 456.07 633.64 C 458.96 637.43 463.3 641.39 464.75 642.94 L 464.75 650 L 395.38 650 Z"
+        id="b3-area2a" />
+      <path
+        class="curve-a"
+        d="M 384.06 648.36 C 385.24 647.92 388.78 647.03 391.14 645.71 C 393.5 644.4 395.86 642.76 398.21 640.46 C 400.57 638.16 402.93 635.19 405.29 631.91 C 407.65 628.63 410.01 624.46 412.37 620.76 C 414.73 617.07 417.09 612.74 419.45 609.74 C 421.81 606.73 424.17 603.91 426.53 602.75 C 428.88 601.59 431.24 601.59 433.6 602.75 C 435.96 603.91 438.32 606.73 440.68 609.74 C 443.04 612.74 445.4 617.07 447.76 620.76 C 450.12 624.46 452.48 628.63 454.84 631.91 C 457.2 635.19 459.55 638.16 461.91 640.46 C 464.27 642.76 466.63 644.4 468.99 645.71 C 471.35 647.03 474.89 647.92 476.07 648.36"
+        id="b3-curve2a" />
+      <path class="mean-a" d="M 430.06 706 L 430.06 601.79" id="b3-mean2a" />
+      <path
+        class="area-o"
+        d="M 414.06 645.95 C 416.58 645.06 424.14 642.79 429.18 640.62 C 434.21 638.44 439.25 635.42 444.29 632.9 C 449.33 630.37 454.37 627.24 459.41 625.48 C 464.45 623.72 469.49 622.35 474.53 622.35 C 479.57 622.35 484.6 623.72 489.64 625.48 C 494.68 627.24 499.72 630.37 504.76 632.9 C 509.8 635.42 514.84 638.44 519.88 640.62 C 524.92 642.79 532.48 645.06 535 645.95 L 535 650 L 414.06 650 Z"
+        id="b3-area2o" />
+      <path
+        class="curve-o"
+        d="M 394.31 649.06 C 396.37 648.81 402.54 648.3 406.65 647.54 C 410.77 646.79 414.88 645.85 418.99 644.53 C 423.11 643.21 427.22 641.51 431.33 639.62 C 435.45 637.74 439.56 635.35 443.68 633.23 C 447.79 631.11 451.9 628.63 456.02 626.91 C 460.13 625.19 464.24 623.57 468.36 622.9 C 472.47 622.23 476.58 622.23 480.7 622.9 C 484.81 623.57 488.92 625.19 493.04 626.91 C 497.15 628.63 501.26 631.11 505.38 633.23 C 509.49 635.35 513.61 637.74 517.72 639.62 C 521.83 641.51 525.95 643.21 530.06 644.53 C 534.17 645.85 538.29 646.79 542.4 647.54 C 546.51 648.3 552.68 648.81 554.74 649.06"
+        id="b3-curve2o" />
+      <path class="mean-o" d="M 474.53 706 L 474.53 622.35" id="b3-mean2o" />
+      <path class="barsep" d="M 347.6 664 L 591.2 664" id="b3-barsep2" />
+      <path class="bar-a" d="M 395.38 680 L 464.75 680 M 395.38 674 L 395.38 686 M 464.75 674 L 464.75 686" id="b3-bar2a" />
+      <circle class="dot-a" cx="430.06" cy="680" id="b3-bardot2a" r="5" />
+      <path class="bar-o" d="M 414.06 700 L 535 700 M 414.06 694 L 414.06 706 M 535 694 L 535 706" id="b3-bar2o" />
+      <circle class="dot-o" cx="474.53" cy="700" id="b3-bardot2o" r="5" />
+      <text xml:space="preserve" class="qmark" id="b3-q2" text-anchor="middle" x="462.4" y="732">?</text>
+      <text xml:space="preserve" class="fires" id="b3-fires2" text-anchor="middle" x="462.4" y="748">only rule 1 says “different”</text>
+      <rect class="card" height="186" id="b3-card3" rx="16" width="281.6" x="619.2" y="566" />
+      <text xml:space="preserve" class="ptag" id="b3-tag3" text-anchor="middle" x="760" y="522">RULE 2</text>
+      <text xml:space="preserve" class="pcap" id="b3-cap3" text-anchor="middle" x="760" y="542"><tspan xml:space="preserve" class="c-pur">current</tspan> mean outside <tspan
+          xml:space="preserve"
+          class="c-org">new’s</tspan></text>
+      <line class="pax" id="b3-ax3" marker-end="url(#ah-ink)" x1="645.2" x2="894.8" y1="650" y2="650" />
+      <line class="pax" id="b3-ay3" x1="645.2" x2="645.2" y1="650" y2="578" />
+      <path
+        class="area-a"
+        d="M 730.19 642.94 C 731.63 641.39 735.97 637.43 738.86 633.64 C 741.75 629.84 744.64 624.58 747.53 620.18 C 750.42 615.78 753.31 610.31 756.2 607.25 C 759.09 604.18 761.98 601.79 764.87 601.79 C 767.76 601.79 770.65 604.18 773.54 607.25 C 776.43 610.31 779.32 615.78 782.21 620.18 C 785.1 624.58 787.99 629.84 790.88 633.64 C 793.77 637.43 798.1 641.39 799.55 642.94 L 799.55 650 L 730.19 650 Z"
+        id="b3-area3a" />
+      <path
+        class="curve-a"
+        d="M 718.86 648.36 C 720.04 647.92 723.58 647.03 725.94 645.71 C 728.3 644.4 730.66 642.76 733.02 640.46 C 735.38 638.16 737.74 635.19 740.1 631.91 C 742.45 628.63 744.81 624.46 747.17 620.76 C 749.53 617.07 751.89 612.74 754.25 609.74 C 756.61 606.73 758.97 603.91 761.33 602.75 C 763.69 601.59 766.05 601.59 768.41 602.75 C 770.77 603.91 773.12 606.73 775.48 609.74 C 777.84 612.74 780.2 617.07 782.56 620.76 C 784.92 624.46 787.28 628.63 789.64 631.91 C 792 635.19 794.36 638.16 796.72 640.46 C 799.08 642.76 801.44 644.4 803.79 645.71 C 806.15 647.03 809.69 647.92 810.87 648.36"
+        id="b3-curve3a" />
+      <path class="mean-a" d="M 764.87 706 L 764.87 601.79" id="b3-mean3a" />
+      <path
+        class="area-o"
+        d="M 773.76 636.23 C 774.5 633.21 776.72 625.49 778.21 618.09 C 779.69 610.7 781.17 600.42 782.65 591.85 C 784.13 583.27 785.62 572.61 787.1 566.63 C 788.58 560.66 790.06 556 791.55 556 C 793.03 556 794.51 560.66 795.99 566.63 C 797.47 572.61 798.96 583.27 800.44 591.85 C 801.92 600.42 803.4 610.7 804.88 618.09 C 806.37 625.49 808.59 633.21 809.33 636.23 L 809.33 650 L 773.76 650 Z"
+        id="b3-area3o" />
+      <path
+        class="curve-o"
+        d="M 767.95 646.8 C 768.56 645.94 770.37 644.21 771.58 641.64 C 772.79 639.07 774 635.88 775.21 631.4 C 776.42 626.91 777.63 621.12 778.84 614.72 C 780.05 608.32 781.26 600.19 782.47 592.99 C 783.68 585.78 784.89 577.34 786.1 571.48 C 787.31 565.63 788.52 560.13 789.73 557.86 C 790.94 555.59 792.15 555.59 793.36 557.86 C 794.57 560.13 795.78 565.63 796.99 571.48 C 798.2 577.34 799.41 585.78 800.62 592.99 C 801.83 600.19 803.04 608.32 804.25 614.72 C 805.46 621.12 806.67 626.91 807.88 631.4 C 809.09 635.88 810.3 639.07 811.51 641.64 C 812.72 644.21 814.53 645.94 815.14 646.8"
+        id="b3-curve3o" />
+      <path class="mean-o" d="M 791.55 706 L 791.55 556" id="b3-mean3o" />
+      <path class="barsep" d="M 645.2 664 L 888.8 664" id="b3-barsep3" />
+      <path class="bar-a" d="M 730.19 680 L 799.55 680 M 730.19 674 L 730.19 686 M 799.55 674 L 799.55 686" id="b3-bar3a" />
+      <circle class="dot-a" cx="764.87" cy="680" id="b3-bardot3a" r="5" />
+      <path class="bar-o" d="M 773.76 700 L 809.33 700 M 773.76 694 L 773.76 706 M 809.33 694 L 809.33 706" id="b3-bar3o" />
+      <circle class="dot-o" cx="791.55" cy="700" id="b3-bardot3o" r="5" />
+      <text xml:space="preserve" class="qmark" id="b3-q3" text-anchor="middle" x="760" y="732">?</text>
+      <text xml:space="preserve" class="fires" id="b3-fires3" text-anchor="middle" x="760" y="748">only rule 2 says “different”</text>
+      <rect class="card" height="186" id="b3-card4" rx="16" width="281.6" x="916.8" y="566" />
+      <text xml:space="preserve" class="ptag" id="b3-tag4" text-anchor="middle" x="1057.6" y="522">RULE 3</text>
+      <text xml:space="preserve" class="pcap" id="b3-cap4" text-anchor="middle" x="1057.6" y="542">means outside, overlapping</text>
+      <line class="pax" id="b3-ax4" marker-end="url(#ah-ink)" x1="942.8" x2="1192.4" y1="650" y2="650" />
+      <line class="pax" id="b3-ay4" x1="942.8" x2="942.8" y1="650" y2="578" />
+      <path
+        class="area-a"
+        d="M 971.91 642.94 C 973.35 641.39 977.69 637.43 980.58 633.64 C 983.47 629.84 986.36 624.58 989.25 620.18 C 992.14 615.78 995.03 610.31 997.92 607.25 C 1000.81 604.18 1003.7 601.79 1006.59 601.79 C 1009.48 601.79 1012.37 604.18 1015.26 607.25 C 1018.15 610.31 1021.04 615.78 1023.93 620.18 C 1026.82 624.58 1029.71 629.84 1032.6 633.64 C 1035.49 637.43 1039.83 641.39 1041.27 642.94 L 1041.27 650 L 971.91 650 Z"
+        id="b3-area4a" />
+      <path
+        class="curve-a"
+        d="M 960.58 648.36 C 961.76 647.92 965.3 647.03 967.66 645.71 C 970.02 644.4 972.38 642.76 974.74 640.46 C 977.1 638.16 979.46 635.19 981.82 631.91 C 984.18 628.63 986.54 624.46 988.9 620.76 C 991.26 617.07 993.61 612.74 995.97 609.74 C 998.33 606.73 1000.69 603.91 1003.05 602.75 C 1005.41 601.59 1007.77 601.59 1010.13 602.75 C 1012.49 603.91 1014.85 606.73 1017.21 609.74 C 1019.57 612.74 1021.93 617.07 1024.28 620.76 C 1026.64 624.46 1029 628.63 1031.36 631.91 C 1033.72 635.19 1036.08 638.16 1038.44 640.46 C 1040.8 642.76 1043.16 644.4 1045.52 645.71 C 1047.88 647.03 1051.42 647.92 1052.6 648.36"
+        id="b3-curve4a" />
+      <path class="mean-a" d="M 1006.59 706 L 1006.59 601.79" id="b3-mean4a" />
+      <path
+        class="area-o"
+        d="M 1027.93 645.95 C 1030.45 645.06 1038.01 642.79 1043.05 640.62 C 1048.09 638.44 1053.13 635.42 1058.17 632.9 C 1063.21 630.37 1068.24 627.24 1073.28 625.48 C 1078.32 623.72 1083.36 622.35 1088.4 622.35 C 1093.44 622.35 1098.48 623.72 1103.52 625.48 C 1108.56 627.24 1113.6 630.37 1118.64 632.9 C 1123.67 635.42 1128.71 638.44 1133.75 640.62 C 1138.79 642.79 1146.35 645.06 1148.87 645.95 L 1148.87 650 L 1027.93 650 Z"
+        id="b3-area4o" />
+      <path
+        class="curve-o"
+        d="M 1008.19 649.06 C 1010.24 648.81 1016.41 648.3 1020.53 647.54 C 1024.64 646.79 1028.75 645.85 1032.87 644.53 C 1036.98 643.21 1041.1 641.51 1045.21 639.62 C 1049.32 637.74 1053.44 635.35 1057.55 633.23 C 1061.66 631.11 1065.78 628.63 1069.89 626.91 C 1074 625.19 1078.12 623.57 1082.23 622.9 C 1086.34 622.23 1090.46 622.23 1094.57 622.9 C 1098.68 623.57 1102.8 625.19 1106.91 626.91 C 1111.03 628.63 1115.14 631.11 1119.25 633.23 C 1123.37 635.35 1127.48 637.74 1131.59 639.62 C 1135.71 641.51 1139.82 643.21 1143.93 644.53 C 1148.05 645.85 1152.16 646.79 1156.27 647.54 C 1160.39 648.3 1166.56 648.81 1168.62 649.06"
+        id="b3-curve4o" />
+      <path class="mean-o" d="M 1088.4 706 L 1088.4 622.35" id="b3-mean4o" />
+      <path class="barsep" d="M 942.8 664 L 1186.4 664" id="b3-barsep4" />
+      <path class="bar-a" d="M 971.91 680 L 1041.27 680 M 971.91 674 L 971.91 686 M 1041.27 674 L 1041.27 686" id="b3-bar4a" />
+      <circle class="dot-a" cx="1006.59" cy="680" id="b3-bardot4a" r="5" />
+      <path class="bar-o" d="M 1027.93 700 L 1148.87 700 M 1027.93 694 L 1027.93 706 M 1148.87 694 L 1148.87 706" id="b3-bar4o" />
+      <circle class="dot-o" cx="1088.4" cy="700" id="b3-bardot4o" r="5" />
+      <text xml:space="preserve" class="qmark" id="b3-q4" text-anchor="middle" x="1057.6" y="732">?</text>
+      <text xml:space="preserve" class="fires" id="b3-fires4" text-anchor="middle" x="1057.6" y="748">only rule 3 says “no”</text>
+      <rect class="card" height="186" id="b3-card5" rx="16" width="281.6" x="1214.4" y="566" />
+      <text xml:space="preserve" class="pcap" id="b3-cap5" text-anchor="middle" x="1355.2" y="542">intervals don’t overlap</text>
+      <line class="pax" id="b3-ax5" marker-end="url(#ah-ink)" x1="1240.4" x2="1490" y1="650" y2="650" />
+      <line class="pax" id="b3-ay5" x1="1240.4" x2="1240.4" y1="650" y2="578" />
+      <path
+        class="area-a"
+        d="M 1251.72 642.94 C 1253.17 641.39 1257.5 637.43 1260.39 633.64 C 1263.28 629.84 1266.17 624.58 1269.06 620.18 C 1271.95 615.78 1274.84 610.31 1277.73 607.25 C 1280.62 604.18 1283.52 601.79 1286.41 601.79 C 1289.3 601.79 1292.19 604.18 1295.08 607.25 C 1297.97 610.31 1300.86 615.78 1303.75 620.18 C 1306.64 624.58 1309.53 629.84 1312.42 633.64 C 1315.31 637.43 1319.64 641.39 1321.09 642.94 L 1321.09 650 L 1251.72 650 Z"
+        id="b3-area5a" />
+      <path
+        class="curve-a"
+        d="M 1240.4 648.36 C 1241.58 647.92 1245.12 647.03 1247.48 645.71 C 1249.84 644.4 1252.2 642.76 1254.56 640.46 C 1256.91 638.16 1259.27 635.19 1261.63 631.91 C 1263.99 628.63 1266.35 624.46 1268.71 620.76 C 1271.07 617.07 1273.43 612.74 1275.79 609.74 C 1278.15 606.73 1280.51 603.91 1282.87 602.75 C 1285.23 601.59 1287.58 601.59 1289.94 602.75 C 1292.3 603.91 1294.66 606.73 1297.02 609.74 C 1299.38 612.74 1301.74 617.07 1304.1 620.76 C 1306.46 624.46 1308.82 628.63 1311.18 631.91 C 1313.54 635.19 1315.9 638.16 1318.25 640.46 C 1320.61 642.76 1322.97 644.4 1325.33 645.71 C 1327.69 647.03 1331.23 647.92 1332.41 648.36"
+        id="b3-curve5a" />
+      <path class="mean-a" d="M 1286.41 706 L 1286.41 601.79" id="b3-mean5a" />
+      <path
+        class="area-o"
+        d="M 1343.32 645.95 C 1345.84 645.06 1353.4 642.79 1358.43 640.62 C 1363.47 638.44 1368.51 635.42 1373.55 632.9 C 1378.59 630.37 1383.63 627.24 1388.67 625.48 C 1393.71 623.72 1398.75 622.35 1403.79 622.35 C 1408.83 622.35 1413.86 623.72 1418.9 625.48 C 1423.94 627.24 1428.98 630.37 1434.02 632.9 C 1439.06 635.42 1444.1 638.44 1449.14 640.62 C 1454.18 642.79 1461.74 645.06 1464.26 645.95 L 1464.26 650 L 1343.32 650 Z"
+        id="b3-area5o" />
+      <path
+        class="curve-o"
+        d="M 1323.57 649.06 C 1325.63 648.81 1331.8 648.3 1335.91 647.54 C 1340.03 646.79 1344.14 645.85 1348.25 644.53 C 1352.37 643.21 1356.48 641.51 1360.59 639.62 C 1364.71 637.74 1368.82 635.35 1372.93 633.23 C 1377.05 631.11 1381.16 628.63 1385.28 626.91 C 1389.39 625.19 1393.5 623.57 1397.62 622.9 C 1401.73 622.23 1405.84 622.23 1409.96 622.9 C 1414.07 623.57 1418.18 625.19 1422.3 626.91 C 1426.41 628.63 1430.52 631.11 1434.64 633.23 C 1438.75 635.35 1442.86 637.74 1446.98 639.62 C 1451.09 641.51 1455.21 643.21 1459.32 644.53 C 1463.43 645.85 1467.55 646.79 1471.66 647.54 C 1475.77 648.3 1481.94 648.81 1484 649.06"
+        id="b3-curve5o" />
+      <path class="mean-o" d="M 1403.79 706 L 1403.79 622.35" id="b3-mean5o" />
+      <path class="barsep" d="M 1240.4 664 L 1484 664" id="b3-barsep5" />
+      <path class="bar-a" d="M 1251.72 680 L 1321.09 680 M 1251.72 674 L 1251.72 686 M 1321.09 674 L 1321.09 686" id="b3-bar5a" />
+      <circle class="dot-a" cx="1286.41" cy="680" id="b3-bardot5a" r="5" />
+      <path class="bar-o" d="M 1343.32 700 L 1464.26 700 M 1343.32 694 L 1343.32 706 M 1464.26 694 L 1464.26 706" id="b3-bar5o" />
+      <circle class="dot-o" cx="1403.79" cy="700" id="b3-bardot5o" r="5" />
+      <text xml:space="preserve" class="fires" id="b3-fires5" text-anchor="middle" x="1355.2" y="748">all three rules agree</text>
+      <rect class="gbox" height="96" id="b3-gwash" rx="24" width="1496" x="12" y="758" />
+      <path class="brace brace-blue" d="M 24.0 766 Q 24.0 782 40.0 782 L 148.8 782 Q 164.8 782 164.8 798 Q 164.8 782 180.8 782 L 289.6 782 Q 305.6 782 305.6 766" id="b3-gbrace-no" />
+      <text xml:space="preserve" class="verdict c-blue" id="b3-gv-no" text-anchor="middle" x="164.8" y="830">Not significant</text>
+      <path class="brace brace-ink" d="M 321.6 766 Q 321.6 782 337.6 782 L 744.0 782 Q 760.0 782 760.0 798 Q 760.0 782 776.0 782 L 1182.4 782 Q 1198.4 782 1198.4 766" id="b3-gbrace-dep" />
+      <text xml:space="preserve" class="verdict c-grey" id="b3-gv-dep" text-anchor="middle" x="760" y="830">Significant or not? Depends which rule you pick.</text>
+      <path class="brace brace-green" d="M 1214.4 766 Q 1214.4 782 1230.4 782 L 1339.2 782 Q 1355.2 782 1355.2 798 Q 1355.2 782 1371.2 782 L 1480.0 782 Q 1496.0 782 1496.0 766" id="b3-gbrace-yes" />
+      <text xml:space="preserve" class="verdict c-green" id="b3-gv-yes" text-anchor="middle" x="1355.2" y="830">Significantly better</text>
+    </g>
+  </g>
+</svg>

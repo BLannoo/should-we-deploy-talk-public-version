@@ -1,0 +1,17 @@
+{
+  "name": "token-talk-deck",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "slidev discovery-order.md",
+    "build": "slidev build discovery-order.md",
+    "export": "slidev export discovery-order.md --output ../should-we-deploy-talk.pdf --timeout 60000"
+  },
+  "dependencies": {
+    "@slidev/cli": "52.20.1",
+    "@slidev/theme-default": "0.25.0"
+  },
+  "devDependencies": {
+    "playwright-chromium": "1.61.1"
+  }
+}

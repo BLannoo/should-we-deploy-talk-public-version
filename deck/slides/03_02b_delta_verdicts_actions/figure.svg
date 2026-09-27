@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+  font-family="Inter, sans-serif"
+  height="960"
+  id="svg1"
+  viewBox="-104 0 1624 960"
+  width="1624">
+  <sodipodi:namedview
+    inkscape:cx="812.0"
+    inkscape:cy="480.0"
+    inkscape:window-height="1080"
+    inkscape:window-maximized="1"
+    inkscape:window-width="1920"
+    inkscape:window-x="0"
+    inkscape:window-y="0"
+    inkscape:zoom="0.7"
+    id="namedview1"
+    showgrid="false" />
+  <defs id="defs1">
+    <style id="style1">
+      .fig { font-family: Inter, sans-serif; }
+      .bg { fill: #ffffff; }
+      .rbox { fill: #d32f2f; fill-opacity: 0.055; stroke: none; }
+      .gbox { fill: #1b7f3b; fill-opacity: 0.07; stroke: none; }
+      .pill { fill: #ffffff; stroke: #d5dae6; stroke-width: 2; }
+      .card { fill: #ffffff; stroke: #d5dae6; stroke-width: 2; }
+      .pax { stroke: #14203a; stroke-width: 2.5; fill: none; }
+      .title { fill: #16233f; font-size: 38px; font-weight: 800; }
+      .bandtitle { font-size: 25px; font-weight: 700; }
+      .vtag { font-size: 28px; font-weight: 800; letter-spacing: 1px; }
+      .quote { font-size: 23px; font-weight: 700; }
+      .dens { font-size: 20px; font-weight: 600; fill: #14203a; }
+      .brace { fill: none; stroke-width: 3; }
+      .brace-red { stroke: #d32f2f; }
+      .brace-blue { stroke: #1f4fd6; }
+      .brace-green { stroke: #1b7f3b; }
+      .verdict { font-size: 27px; font-weight: 700; }
+      .verdictp { font-size: 23px; font-weight: 400; fill: #14203a; }
+      .badge { fill: #ffffff; stroke-width: 3.5; }
+      .badge-sym { font-size: 34px; font-weight: 800; }
+      .dep { font-size: 27px; font-weight: 700; }
+      .depsub { font-size: 21px; font-weight: 400; fill: #14203a; }
+      .note { font-size: 25px; font-weight: 700; }
+      .leg { font-size: 25px; font-weight: 700; }
+      .legsub { font-size: 22px; font-weight: 400; }
+      .c-red { fill: #d32f2f; }
+      .c-blue { fill: #1f4fd6; }
+      .c-green { fill: #1b7f3b; }
+      .c-pur { fill: #5b2d90; }
+      .c-org { fill: #e8541f; }
+      text { fill: #14203a; }
+      .curve { stroke: #1f4fd6; stroke-width: 4.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .zero { stroke: #14203a; stroke-width: 2.5; stroke-dasharray: 9 8; fill: none; }
+      .zerolbl { font-size: 22px; font-weight: 600; }
+      .xlbl { font-size: 18px; font-weight: 500; }
+    </style>
+    <marker id="ah-ink" markerHeight="7" markerWidth="7" orient="auto-start-reverse" refX="9" refY="5" viewBox="0 0 10 10">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#14203a" id="ah-ink-p" />
+    </marker>
+  </defs>
+  <g class="fig" id="fig">
+    <rect class="bg" height="960" id="bg" width="1624" x="-104" y="0" />
+    <text class="title" id="title" text-anchor="middle" x="760" y="58">The balanced rule</text>
+    <rect class="rbox" height="154" id="rbox" rx="24" width="1496" x="12" y="82" />
+    <text class="vtag c-red" id="tag-common" text-anchor="middle" transform="rotate(-90 -52 159)" x="-52" y="159">Common rule</text>
+    <rect class="gbox" height="300" id="gbox" rx="24" width="1496" x="12" y="648" />
+    <text class="vtag c-green" id="tag-balanced" text-anchor="middle" transform="rotate(-90 -52 798)" x="-52" y="798">Balanced rule</text>
+    <!--naive framing: title, Δ-sign group labels, quoted 2-outcome reading, 2 + 2 braces-->
+    <svg height="34" id="f5" overflow="hidden" preserveAspectRatio="xMidYMid meet" style="color:#14203a" viewBox="0 -716 2666.6 756" width="119.9" x="322" y="133">
+      <g fill="currentColor" id="f5-1" stroke="currentColor" stroke-width="0" transform="scale(1 -1)">
+        <g data-mml-node="math" id="f5-2">
+          <g data-mml-node="mstyle" fill="#1f4fd6" id="f5-3" stroke="#1f4fd6">
+            <g data-mjx-texclass="ORD" data-mml-node="TeXAtom" id="f5-4">
+              <g data-mml-node="mi" id="f5-5">
+                <path
+                  d="M51 0Q46 4 46 7Q46 9 215 357T388 709Q391 716 416 716Q439 716 444 709Q447 705 616 357T786 7Q786 4 781 0H51ZM507 344L384 596L137 92L383 91H630Q630 93 507 344Z"
+                  data-c="394"
+                  id="f5-6" />
+              </g>
+            </g>
+            <g data-mjx-texclass="REL" data-mml-node="TeXAtom" id="f5-7" transform="translate(1110.8)">
+              <g data-mml-node="mstyle" fill="#d32f2f" id="f5-8" stroke="#d32f2f">
+                <g data-mjx-texclass="ORD" data-mml-node="TeXAtom" id="f5-9">
+                  <g data-mml-node="mo" id="f5-10">
+                    <path
+                      d="M694 -11T694 -19T688 -33T678 -40Q671 -40 524 29T234 166L90 235Q83 240 83 250Q83 261 91 266Q664 540 678 540Q681 540 687 534T694 519T687 505Q686 504 417 376L151 250L417 124Q686 -4 687 -5Q694 -11 694 -19Z"
+                      data-c="3C"
+                      id="f5-11" />
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g data-mml-node="mstyle" fill="#14203a" id="f5-12" stroke="#14203a" transform="translate(2166.6)">
+              <g data-mjx-texclass="ORD" data-mml-node="TeXAtom" id="f5-13">
+                <g data-mml-node="mn" id="f5-14">
+                  <path
+                    d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"
+                    data-c="30"
+                    id="f5-15" />
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+    <svg height="34" id="f6" overflow="hidden" preserveAspectRatio="xMidYMid meet" style="color:#14203a" viewBox="0 -716 2666.6 756" width="119.9" x="1054" y="133">
+      <g fill="currentColor" id="f6-1" stroke="currentColor" stroke-width="0" transform="scale(1 -1)">
+        <g data-mml-node="math" id="f6-2">
+          <g data-mml-node="mstyle" fill="#1f4fd6" id="f6-3" stroke="#1f4fd6">
+            <g data-mjx-texclass="ORD" data-mml-node="TeXAtom" id="f6-4">
+              <g data-mml-node="mi" id="f6-5">
+                <path
+                  d="M51 0Q46 4 46 7Q46 9 215 357T388 709Q391 716 416 716Q439 716 444 709Q447 705 616 357T786 7Q786 4 781 0H51ZM507 344L384 596L137 92L383 91H630Q630 93 507 344Z"
+                  data-c="394"
+                  id="f6-6" />
+              </g>
+            </g>
+            <g data-mjx-texclass="REL" data-mml-node="TeXAtom" id="f6-7" transform="translate(1110.8)">
+              <g data-mml-node="mstyle" fill="#1b7f3b" id="f6-8" stroke="#1b7f3b">
+                <g data-mjx-texclass="ORD" data-mml-node="TeXAtom" id="f6-9">
+                  <g data-mml-node="mo" id="f6-10">
+                    <path
+                      d="M84 520Q84 528 88 533T96 539L99 540Q106 540 253 471T544 334L687 265Q694 260 694 250T687 235Q685 233 395 96L107 -40H101Q83 -38 83 -20Q83 -19 83 -17Q82 -10 98 -1Q117 9 248 71Q326 108 378 132L626 250L378 368Q90 504 86 509Q84 513 84 520Z"
+                      data-c="3E"
+                      id="f6-11" />
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g data-mml-node="mstyle" fill="#14203a" id="f6-12" stroke="#14203a" transform="translate(2166.6)">
+              <g data-mjx-texclass="ORD" data-mml-node="TeXAtom" id="f6-13">
+                <g data-mml-node="mn" id="f6-14">
+                  <path
+                    d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"
+                    data-c="30"
+                    id="f6-15" />
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+    <text class="quote c-red" id="q-dont" text-anchor="middle" x="382" y="188">“don’t deploy”</text>
+    <text class="quote c-green" id="q-deploy" text-anchor="middle" x="1114" y="188">“deploy”</text>
+    <path class="brace brace-red" d="M 24.0 228.0 Q 24.0 215.0 40.0 215.0 L 366.0 215.0 Q 382.0 215.0 382.0 202.0 Q 382.0 215.0 398.0 215.0 L 724.0 215.0 Q 740.0 215.0 740.0 228.0" id="top-brace-1" />
+    <path
+      class="brace brace-green"
+      d="M 756.0 228.0 Q 756.0 215.0 772.0 215.0 L 1098.0 215.0 Q 1114.0 215.0 1114.0 202.0 Q 1114.0 215.0 1130.0 215.0 L 1456.0 215.0 Q 1472.0 215.0 1472.0 228.0"
+      id="top-brace-2" />
+    <g id="p0">
+      <rect class="card" height="384" id="p0-card" rx="16" width="350" x="24" y="244" />
+      <svg height="34" id="f1" overflow="hidden" preserveAspectRatio="xMidYMid meet" style="color:#14203a" viewBox="0 -716 2888.6 783" width="125.4" x="136.3" y="277">
+        <g fill="currentColor" id="f1-1" stroke="currentColor" stroke-width="0" transform="scale(1 -1)">
+          <g data-mml-node="math" id="f1-2">
+            <g data-mml-node="mstyle" fill="#1f4fd6" id="f1-3" stroke="#1f4fd6">
+              <g data-mjx-texclass="ORD" data-mml-node="TeXAtom" id="f1-4">
+                <g data-mml-node="mi" id="f1-5">
+                  <path
+                    d="M51 0Q46 4 46 7Q46 9 215 357T388 709Q391 716 416 716Q439 716 444 709Q447 705 616 357T786 7Q786 4 781 0H51ZM507 344L384 596L137 92L383 91H630Q630 93 507 344Z"
+                    data-c="394"
+                    id="f1-6" />
+                </g>
+              </g>
+              <g data-mjx-texclass="REL" data-mml-node="TeXAtom" id="f1-7" transform="translate(1110.8)">
+                <g data-mml-node="mstyle" fill="#14203a" id="f1-8" stroke="#14203a">
+                  <g data-mjx-texclass="ORD" data-mml-node="TeXAtom" id="f1-9">
+                    <g data-mml-node="mo" id="f1-10">
+                      <path
+                        d="M639 -48Q639 -54 634 -60T619 -67H618Q612 -67 536 -26Q430 33 329 88Q61 235 59 239Q56 243 56 250T59 261Q62 266 336 415T615 567L619 568Q622 567 625 567Q639 562 639 548Q639 540 633 534Q632 532 374 391L117 250L374 109Q632 -32 633 -34Q639 -40 639 -48ZM944 -48Q944 -54 939 -60T924 -67H923Q917 -67 841 -26Q735 33 634 88Q366 235 364 239Q361 243 361 250T364 261Q367 266 641 415T920 567L924 568Q927 567 930 567Q944 562 944 548Q944 540 938 534Q937 532 679 391L422 250L679 109Q937 -32 938 -34Q944 -40 944 -48Z"
+                        data-c="226A"
+                        id="f1-11" />
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <g data-mml-node="mstyle" fill="#14203a" id="f1-12" stroke="#14203a" transform="translate(2388.6)">
+                <g data-mjx-texclass="ORD" data-mml-node="TeXAtom" id="f1-13">
+                  <g data-mml-node="mn" id="f1-14">
+                    <path
+                      d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"
+                      data-c="30"
+                      id="f1-15" />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+      <text class="dens" id="p0-dens" x="58" y="360">Density</text>
+      <line class="pax" id="p0-ax" marker-end="url(#ah-ink)" x1="66" x2="362" y1="544" y2="544" />
+      <line class="pax" id="p0-ay" x1="66" x2="66" y1="544" y2="372" />
+      <line class="zero" id="p0-zero" x1="296.16" x2="296.16" y1="544" y2="394" />
+      <path
+        class="curve"
+        d="M 83 543.1 C 85.67 542.76 93.67 542.28 99 541.02 C 104.33 539.77 109.67 538.47 115 535.58 C 120.33 532.69 125.67 529.25 131 523.7 C 136.33 518.15 141.67 511.08 147 502.29 C 152.33 493.51 157.67 482.19 163 470.99 C 168.33 459.78 173.67 445.99 179 435.08 C 184.33 424.17 189.67 412.38 195 405.53 C 200.33 398.69 205.67 394 211 394 C 216.33 394 221.67 398.69 227 405.53 C 232.33 412.38 237.67 424.17 243 435.08 C 248.33 445.99 253.67 459.78 259 470.99 C 264.33 482.19 269.67 493.51 275 502.29 C 280.33 511.08 285.67 518.15 291 523.7 C 296.33 529.25 301.67 532.69 307 535.58 C 312.33 538.47 317.67 539.77 323 541.02 C 328.33 542.28 336.33 542.76 339 543.1"
+        id="p0-curve" />
+      <text class="zerolbl" id="p0-zerolbl" text-anchor="middle" x="296.16" y="578">0</text>
+      <text class="xlbl" id="p0-xlbl" text-anchor="middle" x="199" y="608">
+        <tspan class="c-blue" id="p0-xlbl-d">Δ</tspan>
+        =
+        <tspan class="c-org" id="p0-xlbl-b">(Accuracy B</tspan>
+        −
+        <tspan class="c-pur" id="p0-xlbl-a">Accuracy A)</tspan>
+      </text>
+    </g>
+    <g id="p1">
+      <rect class="card" height="384" id="p1-card" rx="16" width="350" x="390" y="244" />
+      <svg height="34" id="f2" overflow="hidden" preserveAspectRatio="xMidYMid meet" style="color:#14203a" viewBox="0 -732 2666.6 960" width="94.4" x="517.8" y="277">
+        <g fill="currentColor" id="f2-1" stroke="currentColor" stroke-width="0" transform="scale(1 -1)">
+          <g data-mml-node="math" id="f2-2">
+            <g data-mml-node="mstyle" fill="#1f4fd6" id="f2-3" stroke="#1f4fd6">
+              <g data-mjx-texclass="ORD" data-mml-node="TeXAtom" id="f2-4">
+                <g data-mml-node="mi" id="f2-5">
+                  <path
+                    d="M51 0Q46 4 46 7Q46 9 215 357T388 709Q391 716 416 716Q439 716 444 709Q447 705 616 357T786 7Q786 4 781 0H51ZM507 344L384 596L137 92L383 91H630Q630 93 507 344Z"
+                    data-c="394"
+                    id="f2-6" />
+                </g>
+              </g>
+              <g data-mjx-texclass="REL" data-mml-node="TeXAtom" id="f2-7" transform="translate(1110.8)">
+                <g data-mml-node="mstyle" fill="#14203a" id="f2-8" stroke="#14203a">
+                  <g data-mjx-texclass="ORD" data-mml-node="TeXAtom" id="f2-9">
+                    <g data-mml-node="mo" id="f2-10">
+                      <path
+                        d="M674 732Q682 732 688 726T694 711T687 697Q686 696 417 568L151 442L399 324Q687 188 691 183Q694 177 694 172Q694 154 676 152H670L382 288Q92 425 90 427Q83 432 83 444Q84 455 96 461Q104 465 382 596T665 730Q669 732 674 732ZM56 -194Q56 -107 106 -51T222 6Q260 6 296 -12T362 -56T420 -108T483 -153T554 -171Q616 -171 654 -128T694 -29Q696 6 708 6Q722 6 722 -26Q722 -102 676 -164T557 -227Q518 -227 481 -209T415 -165T358 -113T294 -69T223 -51Q163 -51 125 -93T83 -196Q81 -228 69 -228Q56 -228 56 -202V-194Z"
+                        data-c="2272"
+                        id="f2-11" />
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <g data-mml-node="mstyle" fill="#14203a" id="f2-12" stroke="#14203a" transform="translate(2166.6)">
+                <g data-mjx-texclass="ORD" data-mml-node="TeXAtom" id="f2-13">
+                  <g data-mml-node="mn" id="f2-14">
+                    <path
+                      d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"
+                      data-c="30"
+                      id="f2-15" />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+      <line class="pax" id="p1-ax" marker-end="url(#ah-ink)" x1="432" x2="728" y1="544" y2="544" />
+      <line class="pax" id="p1-ay" x1="432" x2="432" y1="544" y2="372" />
+      <line class="zero" id="p1-zero" x1="597.8" x2="597.8" y1="544" y2="394" />
+      <path
+        class="curve"
+        d="M 449 543.1 C 451.67 542.76 459.67 542.28 465 541.02 C 470.33 539.77 475.67 538.47 481 535.58 C 486.33 532.69 491.67 529.25 497 523.7 C 502.33 518.15 507.67 511.08 513 502.29 C 518.33 493.51 523.67 482.19 529 470.99 C 534.33 459.78 539.67 445.99 545 435.08 C 550.33 424.17 555.67 412.38 561 405.53 C 566.33 398.69 571.67 394 577 394 C 582.33 394 587.67 398.69 593 405.53 C 598.33 412.38 603.67 424.17 609 435.08 C 614.33 445.99 619.67 459.78 625 470.99 C 630.33 482.19 635.67 493.51 641 502.29 C 646.33 511.08 651.67 518.15 657 523.7 C 662.33 529.25 667.67 532.69 673 535.58 C 678.33 538.47 683.67 539.77 689 541.02 C 694.33 542.28 702.33 542.76 705 543.1"
+        id="p1-curve" />
+      <text class="zerolbl" id="p1-zerolbl" text-anchor="middle" x="597.8" y="578">0</text>
+      <text class="xlbl" id="p1-xlbl" text-anchor="middle" x="565" y="608">
+        <tspan class="c-blue" id="p1-xlbl-d">Δ</tspan>
+        =
+        <tspan class="c-org" id="p1-xlbl-b">(Accuracy B</tspan>
+        −
+        <tspan class="c-pur" id="p1-xlbl-a">Accuracy A)</tspan>
+      </text>
+    </g>
+    <g id="p2">
+      <rect class="card" height="384" id="p2-card" rx="16" width="350" x="756" y="244" />
+      <svg height="34" id="f3" overflow="hidden" preserveAspectRatio="xMidYMid meet" style="color:#14203a" viewBox="0 -732 2666.6 960" width="94.4" x="883.8" y="277">
+        <g fill="currentColor" id="f3-1" stroke="currentColor" stroke-width="0" transform="scale(1 -1)">
+          <g data-mml-node="math" id="f3-2">
+            <g data-mml-node="mstyle" fill="#1f4fd6" id="f3-3" stroke="#1f4fd6">
+              <g data-mjx-texclass="ORD" data-mml-node="TeXAtom" id="f3-4">
+                <g data-mml-node="mi" id="f3-5">
+                  <path
+                    d="M51 0Q46 4 46 7Q46 9 215 357T388 709Q391 716 416 716Q439 716 444 709Q447 705 616 357T786 7Q786 4 781 0H51ZM507 344L384 596L137 92L383 91H630Q630 93 507 344Z"
+                    data-c="394"
+                    id="f3-6" />
+                </g>
+              </g>
+              <g data-mjx-texclass="REL" data-mml-node="TeXAtom" id="f3-7" transform="translate(1110.8)">
+                <g data-mml-node="mstyle" fill="#14203a" id="f3-8" stroke="#14203a">
+                  <g data-mjx-texclass="ORD" data-mml-node="TeXAtom" id="f3-9">
+                    <g data-mml-node="mo" id="f3-10">
+                      <path
+                        d="M90 697Q83 704 83 712T88 726T99 732Q107 732 253 664T543 527T687 457Q694 452 694 442T687 427Q685 425 395 288L107 152H101Q83 154 83 172Q83 173 83 175Q82 182 98 191Q117 201 248 263Q326 300 378 324L626 442L360 568Q91 696 90 697ZM56 -194Q56 -107 106 -51T222 6Q260 6 296 -12T362 -56T420 -108T483 -153T554 -171Q616 -171 654 -128T694 -29Q696 6 708 6Q722 6 722 -26Q722 -102 676 -164T557 -227Q518 -227 481 -209T415 -165T358 -113T294 -69T223 -51Q163 -51 125 -93T83 -196Q81 -228 69 -228Q56 -228 56 -202V-194Z"
+                        data-c="2273"
+                        id="f3-11" />
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <g data-mml-node="mstyle" fill="#14203a" id="f3-12" stroke="#14203a" transform="translate(2166.6)">
+                <g data-mjx-texclass="ORD" data-mml-node="TeXAtom" id="f3-13">
+                  <g data-mml-node="mn" id="f3-14">
+                    <path
+                      d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"
+                      data-c="30"
+                      id="f3-15" />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+      <line class="pax" id="p2-ax" marker-end="url(#ah-ink)" x1="798" x2="1094" y1="544" y2="544" />
+      <line class="pax" id="p2-ay" x1="798" x2="798" y1="544" y2="372" />
+      <line class="zero" id="p2-zero" x1="922.2" x2="922.2" y1="544" y2="394" />
+      <path
+        class="curve"
+        d="M 815 543.1 C 817.67 542.76 825.67 542.28 831 541.02 C 836.33 539.77 841.67 538.47 847 535.58 C 852.33 532.69 857.67 529.25 863 523.7 C 868.33 518.15 873.67 511.08 879 502.29 C 884.33 493.51 889.67 482.19 895 470.99 C 900.33 459.78 905.67 445.99 911 435.08 C 916.33 424.17 921.67 412.38 927 405.53 C 932.33 398.69 937.67 394 943 394 C 948.33 394 953.67 398.69 959 405.53 C 964.33 412.38 969.67 424.17 975 435.08 C 980.33 445.99 985.67 459.78 991 470.99 C 996.33 482.19 1001.67 493.51 1007 502.29 C 1012.33 511.08 1017.67 518.15 1023 523.7 C 1028.33 529.25 1033.67 532.69 1039 535.58 C 1044.33 538.47 1049.67 539.77 1055 541.02 C 1060.33 542.28 1068.33 542.76 1071 543.1"
+        id="p2-curve" />
+      <text class="zerolbl" id="p2-zerolbl" text-anchor="middle" x="922.2" y="578">0</text>
+      <text class="xlbl" id="p2-xlbl" text-anchor="middle" x="931" y="608">
+        <tspan class="c-blue" id="p2-xlbl-d">Δ</tspan>
+        =
+        <tspan class="c-org" id="p2-xlbl-b">(Accuracy B</tspan>
+        −
+        <tspan class="c-pur" id="p2-xlbl-a">Accuracy A)</tspan>
+      </text>
+    </g>
+    <g id="p3">
+      <rect class="card" height="384" id="p3-card" rx="16" width="350" x="1122" y="244" />
+      <svg height="34" id="f4" overflow="hidden" preserveAspectRatio="xMidYMid meet" style="color:#14203a" viewBox="0 -716 2888.6 783" width="125.4" x="1234.3" y="277">
+        <g fill="currentColor" id="f4-1" stroke="currentColor" stroke-width="0" transform="scale(1 -1)">
+          <g data-mml-node="math" id="f4-2">
+            <g data-mml-node="mstyle" fill="#1f4fd6" id="f4-3" stroke="#1f4fd6">
+              <g data-mjx-texclass="ORD" data-mml-node="TeXAtom" id="f4-4">
+                <g data-mml-node="mi" id="f4-5">
+                  <path
+                    d="M51 0Q46 4 46 7Q46 9 215 357T388 709Q391 716 416 716Q439 716 444 709Q447 705 616 357T786 7Q786 4 781 0H51ZM507 344L384 596L137 92L383 91H630Q630 93 507 344Z"
+                    data-c="394"
+                    id="f4-6" />
+                </g>
+              </g>
+              <g data-mjx-texclass="REL" data-mml-node="TeXAtom" id="f4-7" transform="translate(1110.8)">
+                <g data-mml-node="mstyle" fill="#14203a" id="f4-8" stroke="#14203a">
+                  <g data-mjx-texclass="ORD" data-mml-node="TeXAtom" id="f4-9">
+                    <g data-mml-node="mo" id="f4-10">
+                      <path
+                        d="M55 539T55 547T60 561T74 567Q81 567 207 498Q297 449 365 412Q633 265 636 261Q639 255 639 250Q639 241 626 232Q614 224 365 88Q83 -65 79 -66Q76 -67 73 -67Q65 -67 60 -61T55 -47Q55 -39 61 -33Q62 -33 95 -15T193 39T320 109L321 110H322L323 111H324L325 112L326 113H327L329 114H330L331 115H332L333 116L334 117H335L336 118H337L338 119H339L340 120L341 121H342L343 122H344L345 123H346L347 124L348 125H349L351 126H352L353 127H354L355 128L356 129H357L358 130H359L360 131H361L362 132L363 133H364L365 134H366L367 135H368L369 136H370L371 137L372 138H373L374 139H375L376 140L378 141L576 251Q63 530 62 533Q55 539 55 547ZM360 539T360 547T365 561T379 567Q386 567 512 498Q602 449 670 412Q938 265 941 261Q944 255 944 250Q944 241 931 232Q919 224 670 88Q388 -65 384 -66Q381 -67 378 -67Q370 -67 365 -61T360 -47Q360 -39 366 -33Q367 -33 400 -15T498 39T625 109L626 110H627L628 111H629L630 112L631 113H632L634 114H635L636 115H637L638 116L639 117H640L641 118H642L643 119H644L645 120L646 121H647L648 122H649L650 123H651L652 124L653 125H654L656 126H657L658 127H659L660 128L661 129H662L663 130H664L665 131H666L667 132L668 133H669L670 134H671L672 135H673L674 136H675L676 137L677 138H678L679 139H680L681 140L683 141L881 251Q368 530 367 533Q360 539 360 547Z"
+                        data-c="226B"
+                        id="f4-11" />
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <g data-mml-node="mstyle" fill="#14203a" id="f4-12" stroke="#14203a" transform="translate(2388.6)">
+                <g data-mjx-texclass="ORD" data-mml-node="TeXAtom" id="f4-13">
+                  <g data-mml-node="mn" id="f4-14">
+                    <path
+                      d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"
+                      data-c="30"
+                      id="f4-15" />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+      <line class="pax" id="p3-ax" marker-end="url(#ah-ink)" x1="1164" x2="1460" y1="544" y2="544" />
+      <line class="pax" id="p3-ay" x1="1164" x2="1164" y1="544" y2="372" />
+      <line class="zero" id="p3-zero" x1="1223.84" x2="1223.84" y1="544" y2="394" />
+      <path
+        class="curve"
+        d="M 1181 543.1 C 1183.67 542.76 1191.67 542.28 1197 541.02 C 1202.33 539.77 1207.67 538.47 1213 535.58 C 1218.33 532.69 1223.67 529.25 1229 523.7 C 1234.33 518.15 1239.67 511.08 1245 502.29 C 1250.33 493.51 1255.67 482.19 1261 470.99 C 1266.33 459.78 1271.67 445.99 1277 435.08 C 1282.33 424.17 1287.67 412.38 1293 405.53 C 1298.33 398.69 1303.67 394 1309 394 C 1314.33 394 1319.67 398.69 1325 405.53 C 1330.33 412.38 1335.67 424.17 1341 435.08 C 1346.33 445.99 1351.67 459.78 1357 470.99 C 1362.33 482.19 1367.67 493.51 1373 502.29 C 1378.33 511.08 1383.67 518.15 1389 523.7 C 1394.33 529.25 1399.67 532.69 1405 535.58 C 1410.33 538.47 1415.67 539.77 1421 541.02 C 1426.33 542.28 1434.33 542.76 1437 543.1"
+        id="p3-curve" />
+      <text class="zerolbl" id="p3-zerolbl" text-anchor="middle" x="1223.84" y="578">0</text>
+      <text class="xlbl" id="p3-xlbl" text-anchor="middle" x="1297" y="608">
+        <tspan class="c-blue" id="p3-xlbl-d">Δ</tspan>
+        =
+        <tspan class="c-org" id="p3-xlbl-b">(Accuracy B</tspan>
+        −
+        <tspan class="c-pur" id="p3-xlbl-a">Accuracy A)</tspan>
+      </text>
+    </g>
+    <!--the 3-outcome verdict: 1 + 2 + 1 braces, verdicts, decisions, note-->
+    <path class="brace brace-red" d="M 24.0 656.0 Q 24.0 676.0 40.0 676.0 L 183.0 676.0 Q 199.0 676.0 199.0 696.0 Q 199.0 676.0 215.0 676.0 L 358.0 676.0 Q 374.0 676.0 374.0 656.0" id="bot-brace-1" />
+    <path
+      class="brace brace-blue"
+      d="M 390.0 656.0 Q 390.0 676.0 406.0 676.0 L 732.0 676.0 Q 748.0 676.0 748.0 696.0 Q 748.0 676.0 764.0 676.0 L 1090.0 676.0 Q 1106.0 676.0 1106.0 656.0"
+      id="bot-brace-2" />
+    <path
+      class="brace brace-green"
+      d="M 1122.0 656.0 Q 1122.0 676.0 1138.0 676.0 L 1281.0 676.0 Q 1297.0 676.0 1297.0 696.0 Q 1297.0 676.0 1313.0 676.0 L 1456.0 676.0 Q 1472.0 676.0 1472.0 656.0"
+      id="bot-brace-3" />
+    <g id="group-verdicts">
+      <text class="verdict c-red" id="gv-l1" text-anchor="middle" x="199" y="740">Significantly worse</text>
+      <text class="verdictp c-red" id="gv-l2" text-anchor="middle" x="199" y="770">
+        (p &lt; 0.05)
+      </text>
+      <text class="verdict c-blue" id="gv-m1" text-anchor="middle" x="748" y="740">Inconclusive</text>
+      <text class="verdictp c-blue" id="gv-m2" text-anchor="middle" x="748" y="770">(p ≥ 0.05)</text>
+      <text class="verdict c-green" id="gv-r1" text-anchor="middle" x="1297" y="740">Significantly better</text>
+      <text class="verdictp c-green" id="gv-r2" text-anchor="middle" x="1297" y="770">
+        (p &lt; 0.05)
+      </text>
+    </g>
+    <g id="decisions">
+      <circle class="badge" cx="64" cy="856" id="b-worse-c" r="30" stroke="#d32f2f" />
+      <text class="badge-sym c-red" id="b-worse-s" style="font-size:53.33px" text-anchor="middle" x="64" y="872.5">✗</text>
+      <text class="dep c-red" id="b-worse-l1" x="112" y="850">Block deployment</text>
+      <text class="depsub" id="b-worse-l2a" x="112" y="878">(one metric is enough)</text>
+      <circle class="badge" cx="614" cy="856" id="b-incon-c" r="30" stroke="#1f4fd6" />
+      <text class="badge-sym c-blue" id="b-incon-s" style="font-size:53.33px" text-anchor="middle" x="614" y="872.5">≈</text>
+      <text class="dep c-blue" id="b-incon-l1" x="662" y="850">Look at other metrics</text>
+      <text class="depsub" id="b-incon-l2a" x="662" y="878">(or collect more data)</text>
+      <circle class="badge" cx="1162" cy="856" id="b-deploy-c" r="30" stroke="#1b7f3b" />
+      <text class="badge-sym c-green" id="b-deploy-s" style="font-size:53.33px" text-anchor="middle" x="1162" y="872.5">✓</text>
+      <text class="dep c-green" id="b-deploy-l1" x="1210" y="850">Deploy</text>
+      <text class="depsub" id="b-deploy-l2a" x="1210" y="878">(new SUT is better)</text>
+    </g>
+    <text class="note c-green" id="rec-note" text-anchor="middle" x="760" y="938">α = 0.05 — the line between “significant” and “inconclusive”.</text>
+  </g>
+</svg>

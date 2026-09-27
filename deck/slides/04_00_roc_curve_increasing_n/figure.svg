@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+  font-family="Inter, sans-serif"
+  height="955"
+  id="svg1"
+  viewBox="0 0 1520 955"
+  width="1520">
+  <sodipodi:namedview
+    inkscape:cx="760.0"
+    inkscape:cy="477.5"
+    inkscape:window-height="1080"
+    inkscape:window-maximized="1"
+    inkscape:window-width="1920"
+    inkscape:window-x="0"
+    inkscape:window-y="0"
+    inkscape:zoom="0.7"
+    id="namedview1"
+    showgrid="false" />
+  <defs id="defs1">
+    <style id="style1">
+      .fig { font-family: Inter, sans-serif; }
+      .bg { fill: #ffffff; }
+      .banner { fill: #1b5e20; }
+      .title { font-size: 34px; font-weight: 800; fill: #ffffff; }
+      .axis { stroke: #14203a; stroke-width: 3; fill: none; }
+      .tick { stroke: #14203a; stroke-width: 2; }
+      .ticklbl { font-size: 24px; font-weight: 600; fill: #14203a; }
+      .roc { fill: none; stroke-width: 4.5; stroke-linecap: round; stroke-linejoin: round; }
+      .mk { stroke: #ffffff; stroke-width: 1.5; }
+      .diag { stroke: #14203a; stroke-width: 2.5; stroke-dasharray: 9 9; fill: none; }
+      .nlbl { font-size: 25px; font-weight: 700; }
+      .axttl { font-size: 28px; font-weight: 800; fill: #14203a; }
+      .better { font-size: 23px; font-weight: 700; fill: #2f7d32; }
+      .bettersub { font-size: 20px; font-weight: 500; fill: #2f7d32; }
+      .note { font-size: 25px; font-weight: 700; fill: #2f7d32; }
+      .rg { font-size: 24px; font-weight: 600; fill: #8a94a6; }
+      .barrow { stroke: #2f7d32; stroke-width: 4; fill: none; }
+      .ideal { fill: #14203a; stroke: none; }
+      .c-red { fill: #e03131; }
+      .c-green { fill: #2f7d32; }
+      text { fill: #14203a; }
+    </style>
+    <marker id="ah-green-soft" markerHeight="30" markerUnits="userSpaceOnUse" markerWidth="30" orient="auto-start-reverse" preserveAspectRatio="xMidYMid" refX="4.36" refY="5.15" viewBox="0 0 10 10">
+      <path d="M 0,0 10,5 0,10 Z" fill="#2f7d32" id="ah-green-soft-p" />
+    </marker>
+    <linearGradient gradientUnits="userSpaceOnUse" id="ngrad" x1="690.86" x2="574.86" y1="678.61" y2="399.61">
+      <stop id="stop1" offset="0" stop-color="#2f7d32" stop-opacity=".06" />
+      <stop id="stop2" offset="1" stop-color="#2f7d32" stop-opacity=".55" />
+    </linearGradient>
+    <marker id="ah-green" markerHeight="16" markerUnits="userSpaceOnUse" markerWidth="16" orient="auto-start-reverse" refX="8" refY="5" viewBox="0 0 10 10">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#2f7d32" id="ah-green-p" />
+    </marker>
+    <marker id="ah-ink" markerHeight="8" markerWidth="8" orient="auto-start-reverse" refX="9" refY="5" viewBox="0 0 10 10">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#14203a" id="ah-ink-p" />
+    </marker>
+  </defs>
+  <g class="fig" id="fig">
+    <rect class="bg" height="955" id="bg" width="1520" x="0" y="0" />
+    <rect class="banner" height="70" id="banner" width="1520" x="0" y="0" />
+    <text class="title" id="title" text-anchor="middle" x="760" y="47">ROC curve: more data moves you from guessing to knowing</text>
+    <!--axes-->
+    <line class="axis" id="axis-x" marker-end="url(#ah-ink)" x1="470" x2="1230" y1="820" y2="820" />
+    <line class="axis" id="axis-y" marker-end="url(#ah-ink)" x1="470" x2="470" y1="820" y2="60" />
+    <line class="tick" id="xt-0" x1="470" x2="470" y1="820" y2="830" />
+    <text class="ticklbl" id="xtl-0" text-anchor="middle" x="470" y="858">0</text>
+    <line class="tick" id="xt-1" x1="650" x2="650" y1="820" y2="830" />
+    <text class="ticklbl" id="xtl-1" text-anchor="middle" x="650" y="858">0.25</text>
+    <line class="tick" id="xt-2" x1="830" x2="830" y1="820" y2="830" />
+    <text class="ticklbl" id="xtl-2" text-anchor="middle" x="830" y="858">0.5</text>
+    <line class="tick" id="xt-3" x1="1010" x2="1010" y1="820" y2="830" />
+    <text class="ticklbl" id="xtl-3" text-anchor="middle" x="1010" y="858">0.75</text>
+    <line class="tick" id="xt-4" x1="1190" x2="1190" y1="820" y2="830" />
+    <text class="ticklbl" id="xtl-4" text-anchor="middle" x="1190" y="858">1</text>
+    <line class="tick" id="yt-0" x1="460" x2="470" y1="820" y2="820" />
+    <text class="ticklbl" id="ytl-0" text-anchor="end" x="452" y="828">0</text>
+    <line class="tick" id="yt-1" x1="460" x2="470" y1="640" y2="640" />
+    <text class="ticklbl" id="ytl-1" text-anchor="end" x="452" y="648">0.25</text>
+    <line class="tick" id="yt-2" x1="460" x2="470" y1="460" y2="460" />
+    <text class="ticklbl" id="ytl-2" text-anchor="end" x="452" y="468">0.5</text>
+    <line class="tick" id="yt-3" x1="460" x2="470" y1="280" y2="280" />
+    <text class="ticklbl" id="ytl-3" text-anchor="end" x="452" y="288">0.75</text>
+    <line class="tick" id="yt-4" x1="460" x2="470" y1="100" y2="100" />
+    <text class="ticklbl" id="ytl-4" text-anchor="end" x="452" y="108">1</text>
+    <!--random-guessing diagonal (the dotted line)-->
+    <line class="diag" id="diag" x1="470" x2="1190" y1="820" y2="100" />
+    <text class="rg" id="rg1" text-anchor="middle" x="1031.13" y="397.18">Random guessing</text>
+    <text class="rg" id="rg2" text-anchor="middle" x="1031.13" y="427.18">(AUC = 0.5)</text>
+    <!--ideal corner-->
+    <circle class="ideal" cx="470" cy="100" id="ideal-dot" r="7" />
+    <text class="note" id="ideal-l" x="484" y="111">ideal corner</text>
+    <!--ROC curves-->
+    <path
+      class="roc"
+      d="M 470.0 820.0 L 474.5 795.6 L 479.0 781.2 L 483.5 769.2 L 488.0 758.4 L 492.5 748.6 L 497.0 739.3 L 501.5 730.6 L 506.0 722.3 L 510.5 714.3 L 515.0 706.6 L 519.5 699.2 L 524.0 692.0 L 528.5 684.9 L 533.0 678.1 L 537.5 671.4 L 542.0 664.9 L 546.5 658.5 L 551.0 652.2 L 555.5 646.1 L 560.0 640.0 L 564.5 634.0 L 569.0 628.2 L 573.5 622.4 L 578.0 616.7 L 582.5 611.1 L 587.0 605.6 L 591.5 600.1 L 596.0 594.7 L 600.5 589.4 L 605.0 584.1 L 609.5 578.9 L 614.0 573.8 L 618.5 568.7 L 623.0 563.6 L 627.5 558.6 L 632.0 553.6 L 636.5 548.7 L 641.0 543.9 L 645.5 539.1 L 650.0 534.3 L 654.5 529.5 L 659.0 524.8 L 663.5 520.2 L 668.0 515.5 L 672.5 510.9 L 677.0 506.4 L 681.5 501.8 L 686.0 497.3 L 690.5 492.9 L 695.0 488.4 L 699.5 484.0 L 704.0 479.7 L 708.5 475.3 L 713.0 471.0 L 717.5 466.7 L 722.0 462.4 L 726.5 458.2 L 731.0 454.0 L 735.5 449.8 L 740.0 445.6 L 744.5 441.4 L 749.0 437.3 L 753.5 433.2 L 758.0 429.1 L 762.5 425.1 L 767.0 421.0 L 771.5 417.0 L 776.0 413.0 L 780.5 409.0 L 785.0 405.1 L 789.5 401.1 L 794.0 397.2 L 798.5 393.3 L 803.0 389.4 L 807.5 385.5 L 812.0 381.7 L 816.5 377.8 L 821.0 374.0 L 825.5 370.2 L 830.0 366.4 L 834.5 362.7 L 839.0 358.9 L 843.5 355.2 L 848.0 351.4 L 852.5 347.7 L 857.0 344.0 L 861.5 340.3 L 866.0 336.7 L 870.5 333.0 L 875.0 329.4 L 879.5 325.7 L 884.0 322.1 L 888.5 318.5 L 893.0 314.9 L 897.5 311.4 L 902.0 307.8 L 906.5 304.3 L 911.0 300.7 L 915.5 297.2 L 920.0 293.7 L 924.5 290.2 L 929.0 286.7 L 933.5 283.2 L 938.0 279.7 L 942.5 276.3 L 947.0 272.8 L 951.5 269.4 L 956.0 266.0 L 960.5 262.6 L 965.0 259.1 L 969.5 255.8 L 974.0 252.4 L 978.5 249.0 L 983.0 245.6 L 987.5 242.3 L 992.0 238.9 L 996.5 235.6 L 1001.0 232.3 L 1005.5 229.0 L 1010.0 225.7 L 1014.5 222.4 L 1019.0 219.1 L 1023.5 215.8 L 1028.0 212.5 L 1032.5 209.3 L 1037.0 206.0 L 1041.5 202.8 L 1046.0 199.5 L 1050.5 196.3 L 1055.0 193.1 L 1059.5 189.9 L 1064.0 186.7 L 1068.5 183.5 L 1073.0 180.3 L 1077.5 177.1 L 1082.0 173.9 L 1086.5 170.8 L 1091.0 167.6 L 1095.5 164.5 L 1100.0 161.3 L 1104.5 158.2 L 1109.0 155.1 L 1113.5 151.9 L 1118.0 148.8 L 1122.5 145.7 L 1127.0 142.6 L 1131.5 139.5 L 1136.0 136.5 L 1140.5 133.4 L 1145.0 130.3 L 1149.5 127.3 L 1154.0 124.2 L 1158.5 121.2 L 1163.0 118.1 L 1167.5 115.1 L 1172.0 112.1 L 1176.5 109.0 L 1181.0 106.0 L 1185.5 103.0 L 1190.0 100.0"
+      id="roc-25"
+      style="stroke:#e03131" />
+    <circle class="mk" cx="491.6" cy="750.5" fill="#e03131" id="mk-25-0" r="5" />
+    <circle class="mk" cx="527.6" cy="686.3" fill="#e03131" id="mk-25-1" r="5" />
+    <circle class="mk" cx="578" cy="616.7" fill="#e03131" id="mk-25-2" r="5" />
+    <circle class="mk" cx="650" cy="534.3" fill="#e03131" id="mk-25-3" r="5" />
+    <circle class="mk" cx="743.6" cy="442.3" fill="#e03131" id="mk-25-4" r="5" />
+    <circle class="mk" cx="851.6" cy="348.5" fill="#e03131" id="mk-25-5" r="5" />
+    <circle class="mk" cx="974" cy="252.4" fill="#e03131" id="mk-25-6" r="5" />
+    <circle class="mk" cx="1089.2" cy="168.9" fill="#e03131" id="mk-25-7" r="5" />
+    <text class="nlbl" id="nlbl-25" style="font-size:17.3333px;fill:#e03131" x="757.36" y="447.11">N = 25</text>
+    <path
+      class="roc"
+      d="M 470.0 820.0 L 474.5 748.3 L 479.0 721.8 L 483.5 701.9 L 488.0 685.4 L 492.5 671.0 L 497.0 658.1 L 501.5 646.4 L 506.0 635.5 L 510.5 625.4 L 515.0 615.8 L 519.5 606.8 L 524.0 598.2 L 528.5 590.0 L 533.0 582.1 L 537.5 574.5 L 542.0 567.2 L 546.5 560.1 L 551.0 553.3 L 555.5 546.7 L 560.0 540.2 L 564.5 533.9 L 569.0 527.8 L 573.5 521.9 L 578.0 516.0 L 582.5 510.3 L 587.0 504.8 L 591.5 499.3 L 596.0 494.0 L 600.5 488.7 L 605.0 483.6 L 609.5 478.5 L 614.0 473.6 L 618.5 468.7 L 623.0 463.9 L 627.5 459.2 L 632.0 454.5 L 636.5 449.9 L 641.0 445.4 L 645.5 441.0 L 650.0 436.6 L 654.5 432.3 L 659.0 428.0 L 663.5 423.8 L 668.0 419.6 L 672.5 415.5 L 677.0 411.4 L 681.5 407.4 L 686.0 403.5 L 690.5 399.5 L 695.0 395.7 L 699.5 391.8 L 704.0 388.0 L 708.5 384.3 L 713.0 380.5 L 717.5 376.9 L 722.0 373.2 L 726.5 369.6 L 731.0 366.0 L 735.5 362.5 L 740.0 359.0 L 744.5 355.5 L 749.0 352.1 L 753.5 348.7 L 758.0 345.3 L 762.5 341.9 L 767.0 338.6 L 771.5 335.3 L 776.0 332.0 L 780.5 328.8 L 785.0 325.5 L 789.5 322.3 L 794.0 319.2 L 798.5 316.0 L 803.0 312.9 L 807.5 309.8 L 812.0 306.7 L 816.5 303.6 L 821.0 300.6 L 825.5 297.6 L 830.0 294.6 L 834.5 291.6 L 839.0 288.7 L 843.5 285.7 L 848.0 282.8 L 852.5 279.9 L 857.0 277.0 L 861.5 274.2 L 866.0 271.3 L 870.5 268.5 L 875.0 265.7 L 879.5 262.9 L 884.0 260.1 L 888.5 257.4 L 893.0 254.6 L 897.5 251.9 L 902.0 249.2 L 906.5 246.5 L 911.0 243.8 L 915.5 241.1 L 920.0 238.5 L 924.5 235.9 L 929.0 233.2 L 933.5 230.6 L 938.0 228.0 L 942.5 225.5 L 947.0 222.9 L 951.5 220.3 L 956.0 217.8 L 960.5 215.3 L 965.0 212.8 L 969.5 210.2 L 974.0 207.8 L 978.5 205.3 L 983.0 202.8 L 987.5 200.4 L 992.0 197.9 L 996.5 195.5 L 1001.0 193.1 L 1005.5 190.7 L 1010.0 188.3 L 1014.5 185.9 L 1019.0 183.5 L 1023.5 181.1 L 1028.0 178.8 L 1032.5 176.4 L 1037.0 174.1 L 1041.5 171.8 L 1046.0 169.4 L 1050.5 167.1 L 1055.0 164.8 L 1059.5 162.6 L 1064.0 160.3 L 1068.5 158.0 L 1073.0 155.8 L 1077.5 153.5 L 1082.0 151.3 L 1086.5 149.0 L 1091.0 146.8 L 1095.5 144.6 L 1100.0 142.4 L 1104.5 140.2 L 1109.0 138.0 L 1113.5 135.8 L 1118.0 133.7 L 1122.5 131.5 L 1127.0 129.4 L 1131.5 127.2 L 1136.0 125.1 L 1140.5 122.9 L 1145.0 120.8 L 1149.5 118.7 L 1154.0 116.6 L 1158.5 114.5 L 1163.0 112.4 L 1167.5 110.3 L 1172.0 108.2 L 1176.5 106.2 L 1181.0 104.1 L 1185.5 102.0 L 1190.0 100.0"
+      id="roc-100"
+      style="stroke:#f08c00" />
+    <circle class="mk" cx="491.6" cy="673.7" fill="#f08c00" id="mk-100-0" r="5" />
+    <circle class="mk" cx="527.6" cy="591.6" fill="#f08c00" id="mk-100-1" r="5" />
+    <circle class="mk" cx="578" cy="516" fill="#f08c00" id="mk-100-2" r="5" />
+    <circle class="mk" cx="650" cy="436.6" fill="#f08c00" id="mk-100-3" r="5" />
+    <circle class="mk" cx="743.6" cy="356.2" fill="#f08c00" id="mk-100-4" r="5" />
+    <circle class="mk" cx="851.6" cy="280.5" fill="#f08c00" id="mk-100-5" r="5" />
+    <circle class="mk" cx="974" cy="207.8" fill="#f08c00" id="mk-100-6" r="5" />
+    <circle class="mk" cx="1089.2" cy="147.7" fill="#f08c00" id="mk-100-7" r="5" />
+    <text class="nlbl" id="nlbl-100" style="font-size:17.3333px;fill:#f08c00" x="704.93" y="402.48">N = 100</text>
+    <path
+      class="roc"
+      d="M 470.0 820.0 L 474.5 687.4 L 479.0 652.9 L 483.5 628.7 L 488.0 609.5 L 492.5 593.2 L 497.0 579.0 L 501.5 566.3 L 506.0 554.7 L 510.5 544.1 L 515.0 534.3 L 519.5 525.0 L 524.0 516.4 L 528.5 508.2 L 533.0 500.4 L 537.5 492.9 L 542.0 485.8 L 546.5 479.0 L 551.0 472.4 L 555.5 466.1 L 560.0 460.0 L 564.5 454.1 L 569.0 448.4 L 573.5 442.8 L 578.0 437.4 L 582.5 432.2 L 587.0 427.1 L 591.5 422.1 L 596.0 417.3 L 600.5 412.5 L 605.0 407.9 L 609.5 403.4 L 614.0 398.9 L 618.5 394.6 L 623.0 390.3 L 627.5 386.2 L 632.0 382.1 L 636.5 378.1 L 641.0 374.1 L 645.5 370.2 L 650.0 366.4 L 654.5 362.7 L 659.0 359.0 L 663.5 355.4 L 668.0 351.8 L 672.5 348.3 L 677.0 344.8 L 681.5 341.4 L 686.0 338.0 L 690.5 334.7 L 695.0 331.4 L 699.5 328.2 L 704.0 325.0 L 708.5 321.8 L 713.0 318.7 L 717.5 315.6 L 722.0 312.6 L 726.5 309.6 L 731.0 306.6 L 735.5 303.7 L 740.0 300.8 L 744.5 297.9 L 749.0 295.1 L 753.5 292.3 L 758.0 289.5 L 762.5 286.8 L 767.0 284.0 L 771.5 281.3 L 776.0 278.7 L 780.5 276.0 L 785.0 273.4 L 789.5 270.8 L 794.0 268.3 L 798.5 265.7 L 803.0 263.2 L 807.5 260.7 L 812.0 258.2 L 816.5 255.8 L 821.0 253.3 L 825.5 250.9 L 830.0 248.5 L 834.5 246.2 L 839.0 243.8 L 843.5 241.5 L 848.0 239.2 L 852.5 236.9 L 857.0 234.6 L 861.5 232.3 L 866.0 230.1 L 870.5 227.9 L 875.0 225.7 L 879.5 223.5 L 884.0 221.3 L 888.5 219.1 L 893.0 217.0 L 897.5 214.8 L 902.0 212.7 L 906.5 210.6 L 911.0 208.5 L 915.5 206.5 L 920.0 204.4 L 924.5 202.4 L 929.0 200.3 L 933.5 198.3 L 938.0 196.3 L 942.5 194.3 L 947.0 192.3 L 951.5 190.4 L 956.0 188.4 L 960.5 186.5 L 965.0 184.5 L 969.5 182.6 L 974.0 180.7 L 978.5 178.8 L 983.0 176.9 L 987.5 175.1 L 992.0 173.2 L 996.5 171.3 L 1001.0 169.5 L 1005.5 167.7 L 1010.0 165.8 L 1014.5 164.0 L 1019.0 162.2 L 1023.5 160.4 L 1028.0 158.6 L 1032.5 156.9 L 1037.0 155.1 L 1041.5 153.4 L 1046.0 151.6 L 1050.5 149.9 L 1055.0 148.1 L 1059.5 146.4 L 1064.0 144.7 L 1068.5 143.0 L 1073.0 141.3 L 1077.5 139.6 L 1082.0 138.0 L 1086.5 136.3 L 1091.0 134.6 L 1095.5 133.0 L 1100.0 131.3 L 1104.5 129.7 L 1109.0 128.1 L 1113.5 126.5 L 1118.0 124.8 L 1122.5 123.2 L 1127.0 121.6 L 1131.5 120.1 L 1136.0 118.5 L 1140.5 116.9 L 1145.0 115.3 L 1149.5 113.8 L 1154.0 112.2 L 1158.5 110.7 L 1163.0 109.1 L 1167.5 107.6 L 1172.0 106.1 L 1176.5 104.5 L 1181.0 103.0 L 1185.5 101.5 L 1190.0 100.0"
+      id="roc-200"
+      style="stroke:#1f6fd6" />
+    <circle class="mk" cx="491.6" cy="596.3" fill="#1f6fd6" id="mk-200-0" r="5" />
+    <circle class="mk" cx="527.6" cy="509.8" fill="#1f6fd6" id="mk-200-1" r="5" />
+    <circle class="mk" cx="578" cy="437.4" fill="#1f6fd6" id="mk-200-2" r="5" />
+    <circle class="mk" cx="650" cy="366.4" fill="#1f6fd6" id="mk-200-3" r="5" />
+    <circle class="mk" cx="743.6" cy="298.5" fill="#1f6fd6" id="mk-200-4" r="5" />
+    <circle class="mk" cx="851.6" cy="237.3" fill="#1f6fd6" id="mk-200-5" r="5" />
+    <circle class="mk" cx="974" cy="180.7" fill="#1f6fd6" id="mk-200-6" r="5" />
+    <circle class="mk" cx="1089.2" cy="135.3" fill="#1f6fd6" id="mk-200-7" r="5" />
+    <text class="nlbl" id="nlbl-200" style="font-size:17.3333px;fill:#1f6fd6" x="660.27" y="371.16">N = 200</text>
+    <path
+      class="roc"
+      d="M 470.0 820.0 L 474.5 604.9 L 479.0 566.4 L 483.5 540.7 L 488.0 520.8 L 492.5 504.5 L 497.0 490.5 L 501.5 478.2 L 506.0 467.2 L 510.5 457.1 L 515.0 447.9 L 519.5 439.4 L 524.0 431.4 L 528.5 423.9 L 533.0 416.9 L 537.5 410.2 L 542.0 403.9 L 546.5 397.8 L 551.0 392.0 L 555.5 386.5 L 560.0 381.2 L 564.5 376.0 L 569.0 371.1 L 573.5 366.3 L 578.0 361.7 L 582.5 357.2 L 587.0 352.9 L 591.5 348.7 L 596.0 344.6 L 600.5 340.6 L 605.0 336.7 L 609.5 332.9 L 614.0 329.2 L 618.5 325.6 L 623.0 322.1 L 627.5 318.6 L 632.0 315.2 L 636.5 311.9 L 641.0 308.7 L 645.5 305.5 L 650.0 302.4 L 654.5 299.4 L 659.0 296.4 L 663.5 293.4 L 668.0 290.5 L 672.5 287.7 L 677.0 284.9 L 681.5 282.2 L 686.0 279.4 L 690.5 276.8 L 695.0 274.2 L 699.5 271.6 L 704.0 269.0 L 708.5 266.5 L 713.0 264.1 L 717.5 261.6 L 722.0 259.2 L 726.5 256.9 L 731.0 254.5 L 735.5 252.2 L 740.0 250.0 L 744.5 247.7 L 749.0 245.5 L 753.5 243.3 L 758.0 241.1 L 762.5 239.0 L 767.0 236.9 L 771.5 234.8 L 776.0 232.7 L 780.5 230.7 L 785.0 228.6 L 789.5 226.6 L 794.0 224.7 L 798.5 222.7 L 803.0 220.8 L 807.5 218.8 L 812.0 216.9 L 816.5 215.1 L 821.0 213.2 L 825.5 211.4 L 830.0 209.5 L 834.5 207.7 L 839.0 205.9 L 843.5 204.2 L 848.0 202.4 L 852.5 200.7 L 857.0 198.9 L 861.5 197.2 L 866.0 195.5 L 870.5 193.8 L 875.0 192.2 L 879.5 190.5 L 884.0 188.9 L 888.5 187.3 L 893.0 185.6 L 897.5 184.0 L 902.0 182.5 L 906.5 180.9 L 911.0 179.3 L 915.5 177.8 L 920.0 176.2 L 924.5 174.7 L 929.0 173.2 L 933.5 171.7 L 938.0 170.2 L 942.5 168.7 L 947.0 167.2 L 951.5 165.8 L 956.0 164.3 L 960.5 162.9 L 965.0 161.5 L 969.5 160.0 L 974.0 158.6 L 978.5 157.2 L 983.0 155.8 L 987.5 154.4 L 992.0 153.1 L 996.5 151.7 L 1001.0 150.4 L 1005.5 149.0 L 1010.0 147.7 L 1014.5 146.3 L 1019.0 145.0 L 1023.5 143.7 L 1028.0 142.4 L 1032.5 141.1 L 1037.0 139.8 L 1041.5 138.5 L 1046.0 137.3 L 1050.5 136.0 L 1055.0 134.7 L 1059.5 133.5 L 1064.0 132.2 L 1068.5 131.0 L 1073.0 129.8 L 1077.5 128.5 L 1082.0 127.3 L 1086.5 126.1 L 1091.0 124.9 L 1095.5 123.7 L 1100.0 122.5 L 1104.5 121.3 L 1109.0 120.2 L 1113.5 119.0 L 1118.0 117.8 L 1122.5 116.7 L 1127.0 115.5 L 1131.5 114.4 L 1136.0 113.2 L 1140.5 112.1 L 1145.0 111.0 L 1149.5 109.9 L 1154.0 108.7 L 1158.5 107.6 L 1163.0 106.5 L 1167.5 105.4 L 1172.0 104.3 L 1176.5 103.2 L 1181.0 102.2 L 1185.5 101.1 L 1190.0 100.0"
+      id="roc-500"
+      style="stroke:#7048c0" />
+    <circle class="mk" cx="491.6" cy="507.6" fill="#7048c0" id="mk-500-0" r="5" />
+    <circle class="mk" cx="527.6" cy="425.4" fill="#7048c0" id="mk-500-1" r="5" />
+    <circle class="mk" cx="578" cy="361.7" fill="#7048c0" id="mk-500-2" r="5" />
+    <circle class="mk" cx="650" cy="302.4" fill="#7048c0" id="mk-500-3" r="5" />
+    <circle class="mk" cx="743.6" cy="248.2" fill="#7048c0" id="mk-500-4" r="5" />
+    <circle class="mk" cx="851.6" cy="201" fill="#7048c0" id="mk-500-5" r="5" />
+    <circle class="mk" cx="974" cy="158.6" fill="#7048c0" id="mk-500-6" r="5" />
+    <circle class="mk" cx="1089.2" cy="125.4" fill="#7048c0" id="mk-500-7" r="5" />
+    <text class="nlbl" id="nlbl-500" style="font-size:17.3333px;fill:#7048c0" x="615.11" y="337.43">N = 500</text>
+    <path
+      class="roc"
+      d="M 470.0 820.0 L 474.5 511.0 L 479.0 473.1 L 483.5 448.9 L 488.0 430.7 L 492.5 415.9 L 497.0 403.4 L 501.5 392.6 L 506.0 383.0 L 510.5 374.3 L 515.0 366.4 L 519.5 359.2 L 524.0 352.4 L 528.5 346.2 L 533.0 340.3 L 537.5 334.7 L 542.0 329.5 L 546.5 324.5 L 551.0 319.7 L 555.5 315.2 L 560.0 310.9 L 564.5 306.7 L 569.0 302.7 L 573.5 298.9 L 578.0 295.2 L 582.5 291.6 L 587.0 288.1 L 591.5 284.8 L 596.0 281.5 L 600.5 278.4 L 605.0 275.3 L 609.5 272.3 L 614.0 269.4 L 618.5 266.6 L 623.0 263.8 L 627.5 261.1 L 632.0 258.5 L 636.5 255.9 L 641.0 253.4 L 645.5 250.9 L 650.0 248.5 L 654.5 246.2 L 659.0 243.9 L 663.5 241.6 L 668.0 239.4 L 672.5 237.2 L 677.0 235.1 L 681.5 233.0 L 686.0 230.9 L 690.5 228.9 L 695.0 226.9 L 699.5 224.9 L 704.0 223.0 L 708.5 221.1 L 713.0 219.2 L 717.5 217.4 L 722.0 215.6 L 726.5 213.8 L 731.0 212.0 L 735.5 210.3 L 740.0 208.6 L 744.5 206.9 L 749.0 205.2 L 753.5 203.6 L 758.0 202.0 L 762.5 200.4 L 767.0 198.8 L 771.5 197.2 L 776.0 195.7 L 780.5 194.2 L 785.0 192.7 L 789.5 191.2 L 794.0 189.7 L 798.5 188.3 L 803.0 186.8 L 807.5 185.4 L 812.0 184.0 L 816.5 182.6 L 821.0 181.3 L 825.5 179.9 L 830.0 178.6 L 834.5 177.2 L 839.0 175.9 L 843.5 174.6 L 848.0 173.3 L 852.5 172.0 L 857.0 170.8 L 861.5 169.5 L 866.0 168.3 L 870.5 167.1 L 875.0 165.8 L 879.5 164.6 L 884.0 163.4 L 888.5 162.3 L 893.0 161.1 L 897.5 159.9 L 902.0 158.8 L 906.5 157.6 L 911.0 156.5 L 915.5 155.4 L 920.0 154.2 L 924.5 153.1 L 929.0 152.0 L 933.5 151.0 L 938.0 149.9 L 942.5 148.8 L 947.0 147.8 L 951.5 146.7 L 956.0 145.7 L 960.5 144.6 L 965.0 143.6 L 969.5 142.6 L 974.0 141.6 L 978.5 140.5 L 983.0 139.5 L 987.5 138.6 L 992.0 137.6 L 996.5 136.6 L 1001.0 135.6 L 1005.5 134.7 L 1010.0 133.7 L 1014.5 132.8 L 1019.0 131.8 L 1023.5 130.9 L 1028.0 129.9 L 1032.5 129.0 L 1037.0 128.1 L 1041.5 127.2 L 1046.0 126.3 L 1050.5 125.4 L 1055.0 124.5 L 1059.5 123.6 L 1064.0 122.7 L 1068.5 121.8 L 1073.0 121.0 L 1077.5 120.1 L 1082.0 119.2 L 1086.5 118.4 L 1091.0 117.5 L 1095.5 116.7 L 1100.0 115.8 L 1104.5 115.0 L 1109.0 114.2 L 1113.5 113.4 L 1118.0 112.5 L 1122.5 111.7 L 1127.0 110.9 L 1131.5 110.1 L 1136.0 109.3 L 1140.5 108.5 L 1145.0 107.7 L 1149.5 106.9 L 1154.0 106.1 L 1158.5 105.3 L 1163.0 104.6 L 1167.5 103.8 L 1172.0 103.0 L 1176.5 102.3 L 1181.0 101.5 L 1185.5 100.8 L 1190.0 100.0"
+      id="roc-1000"
+      style="stroke:#2f7d32" />
+    <circle class="mk" cx="491.6" cy="418.7" fill="#2f7d32" id="mk-1000-0" r="5" />
+    <circle class="mk" cx="527.6" cy="347.4" fill="#2f7d32" id="mk-1000-1" r="5" />
+    <circle class="mk" cx="578" cy="295.2" fill="#2f7d32" id="mk-1000-2" r="5" />
+    <circle class="mk" cx="650" cy="248.5" fill="#2f7d32" id="mk-1000-3" r="5" />
+    <circle class="mk" cx="743.6" cy="207.2" fill="#2f7d32" id="mk-1000-4" r="5" />
+    <circle class="mk" cx="851.6" cy="172.3" fill="#2f7d32" id="mk-1000-5" r="5" />
+    <circle class="mk" cx="974" cy="141.6" fill="#2f7d32" id="mk-1000-6" r="5" />
+    <circle class="mk" cx="1089.2" cy="117.9" fill="#2f7d32" id="mk-1000-7" r="5" />
+    <text class="nlbl" id="nlbl-1000" style="font-size:17.3333px;fill:#2f7d32" x="536.58" y="256.62">N = 1000</text>
+    <!--increasing-N arrow (in the fan, toward the ideal corner)-->
+    <line id="arrow" marker-end="url(#ah-green-soft)" style="fill:none;stroke:url(#ngrad);stroke-width:13;stroke-linecap:butt" x1="690.86" x2="574.86" y1="678.61" y2="399.61" />
+    <text class="note" id="arr-l1" text-anchor="middle" x="843" y="672">Increasing N →</text>
+    <text class="note" id="arr-l2" text-anchor="middle" x="843" y="702">toward the ideal corner</text>
+    <!--y-axis title + higher-is-better (tied to the vertical axis)-->
+    <text class="axttl" id="y-ttl" x="30" y="460">TRUE POSITIVE RATE</text>
+    <text class="axttl" id="y-ttl2" x="30" y="494">
+      = 1 −
+      <tspan class="c-green" id="y-beta">β</tspan>
+      (Power)
+    </text>
+    <line class="barrow" id="hi-arr" marker-end="url(#ah-green)" x1="436" x2="436" y1="258.17" y2="128.2" />
+    <text class="better" id="hi-1" text-anchor="end" x="418" y="172">Higher is better</text>
+    <text class="bettersub" id="hi-2" text-anchor="end" x="418" y="198">(fewer misses)</text>
+    <!--x-axis title + lower-is-better (tied to the horizontal axis)-->
+    <text class="axttl" id="x-ttl" text-anchor="middle" x="830" y="884">
+      FALSE POSITIVE RATE =
+      <tspan class="c-red" id="x-alpha">α</tspan>
+    </text>
+    <line class="barrow" id="lo-arr" marker-end="url(#ah-green)" x1="715" x2="556" y1="920" y2="920" />
+    <text class="better" id="lo-1" text-anchor="start" x="736" y="927">
+      Lower is better
+      <tspan class="bettersub" id="lo-2">(fewer false alarms)</tspan>
+    </text>
+  </g>
+</svg>

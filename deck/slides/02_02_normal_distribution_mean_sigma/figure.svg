@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+  font-family="Inter, sans-serif"
+  height="1204"
+  id="svg1"
+  viewBox="0 -84 1520 1204"
+  width="1520">
+  <sodipodi:namedview
+    inkscape:cx="760.0"
+    inkscape:cy="602.0"
+    inkscape:window-height="1080"
+    inkscape:window-maximized="1"
+    inkscape:window-width="1920"
+    inkscape:window-x="0"
+    inkscape:window-y="0"
+    inkscape:zoom="0.7"
+    id="namedview1"
+    showgrid="false" />
+  <!--02_02 - Normal distribution: mean, sigma, intervals. Spike redraw (SVG source of truth).
+    Curve geometry: spike/normalize/gen_curve.py. Formulas: LaTeX via MathJax (build_figure.mjs).
+    Style tokens = CSS classes with literal colours (NOT var(): Inkscape 1.4.4 ignores custom
+    properties). Every element carries a stable id so Inkscape auto-names nothing on save.-->
+  <defs id="defs1">
+    <style id="style1">
+      .fig      { font-family: Inter, sans-serif; }
+      .bg       { fill: #ffffff; }
+      .axis     { stroke: #14203a; stroke-width: 3; fill: none; }
+      .curve    { stroke: #1f4fd6; stroke-width: 5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .curve-area { fill: #1f4fd6; fill-opacity: 0.12; stroke: none; }
+      .guide        { stroke: #9aa3b2; stroke-width: 2; stroke-dasharray: 7 7; fill: none; }
+      .guide.blue   { stroke: #1f4fd6; }
+      .guide.green  { stroke: #1b7f3b; }
+      .guide.orange { stroke: #e8710a; }
+      .lead-blue   { stroke: #1f4fd6; stroke-width: 3.5; fill: none; }
+      .lead-purple { stroke: #8e24aa; stroke-width: 3.5; fill: none; }
+      .lead-green  { stroke: #1b7f3b; stroke-width: 3.5; fill: none; }
+      .lead-orange { stroke: #e8710a; stroke-width: 3.5; fill: none; }
+      text      { fill: #14203a; }
+      .t-blue   { fill: #1f4fd6; }
+      .t-purple { fill: #8e24aa; }
+      .t-green  { fill: #1b7f3b; }
+      .t-orange { fill: #e8710a; }
+      .title { fill: #16233f; font-weight: 800; font-size: 42px; }
+      .lbl      { font-size: 27px; font-weight: 700; }
+      .tick     { font-size: 25px; font-weight: 500; }
+      .axislbl  { font-size: 27px; font-weight: 600; }
+      .box        { fill: #ffffff; stroke-width: 2.5; }
+      .box.blue   { stroke: #1f4fd6; }
+      .box.purple { stroke: #8e24aa; }
+      .boxtitle { font-size: 25px; font-weight: 700; }
+      .eqv-warn { fill: #7b8397; stroke: none; }
+      .eqv-warn-mark { stroke: #ffffff; stroke-width: 1.6; stroke-linecap: butt; fill: none; }
+      .eqv-warn-dot { fill: #ffffff; stroke: none; }
+      .eqv-note{ font-size: 15px; font-weight: 500; fill: #7b8397; font-style: italic; }
+      .eqv-hd  { font-size: 21px; font-weight: 700; }
+      .eqv-ax  { stroke: #14203a; stroke-width: 2; fill: none; }
+      .eqv-cv  { stroke: #1f4fd6; stroke-width: 3; fill: none; stroke-linecap: round; }
+      .eqv-f95 { fill: #1f4fd6; fill-opacity: 0.22; stroke: none; }
+      .eqv-ftl { fill: #1f4fd6; fill-opacity: 0.75; stroke: none; }
+      .eqv-tie { stroke: #1f4fd6; stroke-width: 1.8; stroke-dasharray: 5 5; fill: none; }
+      .eqv-eb  { stroke: #1f4fd6; stroke-width: 3.4; fill: none; }
+    </style>
+    <marker id="ah-blue" markerHeight="8" markerWidth="8" orient="auto-start-reverse" refX="9" refY="5" viewBox="0 0 10 10">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#1f4fd6" id="ah-blue-p" />
+    </marker>
+    <marker id="ah-purple" markerHeight="8" markerWidth="8" orient="auto-start-reverse" refX="9" refY="5" viewBox="0 0 10 10">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#8e24aa" id="ah-purple-p" />
+    </marker>
+    <marker id="ah-green" markerHeight="8" markerWidth="8" orient="auto-start-reverse" refX="9" refY="5" viewBox="0 0 10 10">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#1b7f3b" id="ah-green-p" />
+    </marker>
+    <marker id="ah-orange" markerHeight="8" markerWidth="8" orient="auto-start-reverse" refX="9" refY="5" viewBox="0 0 10 10">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#e8710a" id="ah-orange-p" />
+    </marker>
+    <marker id="ah-ink" markerHeight="8" markerWidth="8" orient="auto-start-reverse" refX="9" refY="5" viewBox="0 0 10 10">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#14203a" id="ah-ink-p" />
+    </marker>
+  </defs>
+  <g class="fig" id="fig">
+    <rect class="bg" height="1204" id="bg" width="1520" x="0" y="-84" />
+    <text class="title" id="title" text-anchor="middle" x="760" y="-26">Anatomy of a distribution</text>
+    <path
+      class="curve-area"
+      d="M 95 619.04 C 110.83 618.38 158.33 618.17 190 615.11 C 221.67 612.05 253.33 609.78 285 600.67 C 316.67 591.56 348.33 581.04 380 560.45 C 411.67 539.87 443.33 511.71 475 477.15 C 506.67 442.6 538.33 394.04 570 353.13 C 601.67 312.22 633.33 260.56 665 231.7 C 696.67 202.85 728.33 180 760 180 C 791.67 180 823.33 202.85 855 231.7 C 886.67 260.56 918.33 312.22 950 353.13 C 981.67 394.04 1013.33 442.6 1045 477.15 C 1076.67 511.71 1108.33 539.87 1140 560.45 C 1171.67 581.04 1203.33 591.56 1235 600.67 C 1266.67 609.78 1298.33 612.05 1330 615.11 C 1361.67 618.17 1409.17 618.38 1425 619.04 L 1425 620 L 95 620 Z"
+      id="curve-area" />
+    <g id="guides">
+      <line class="guide" id="guide-mu" x1="760" x2="760" y1="180" y2="620" />
+      <line class="guide blue" id="guide-neg-1s" x1="570" x2="570" y1="353.13" y2="620" />
+      <line class="guide blue" id="guide-pos-1s" x1="950" x2="950" y1="353.13" y2="620" />
+      <line class="guide green" id="guide-neg-2s" x1="379.6" x2="379.6" y1="535.73" y2="620.8" />
+      <line class="guide green" id="guide-pos-2s" x1="1140" x2="1140" y1="534.58" y2="620" />
+      <line class="guide orange" id="guide-neg-196" x1="388" x2="388" y1="620" y2="722" />
+      <line class="guide orange" id="guide-pos-196" x1="1132" x2="1132" y1="620" y2="722" />
+    </g>
+    <path
+      class="curve"
+      d="M 95 619.04 C 110.83 618.38 158.33 618.17 190 615.11 C 221.67 612.05 253.33 609.78 285 600.67 C 316.67 591.56 348.33 581.04 380 560.45 C 411.67 539.87 443.33 511.71 475 477.15 C 506.67 442.6 538.33 394.04 570 353.13 C 601.67 312.22 633.33 260.56 665 231.7 C 696.67 202.85 728.33 180 760 180 C 791.67 180 823.33 202.85 855 231.7 C 886.67 260.56 918.33 312.22 950 353.13 C 981.67 394.04 1013.33 442.6 1045 477.15 C 1076.67 511.71 1108.33 539.87 1140 560.45 C 1171.67 581.04 1203.33 591.56 1235 600.67 C 1266.67 609.78 1298.33 612.05 1330 615.11 C 1361.67 618.17 1409.17 618.38 1425 619.04"
+      id="curve" />
+    <g id="axes">
+      <line class="axis" id="axis-x" marker-end="url(#ah-ink)" x1="70" x2="1470" y1="620" y2="620" />
+      <line class="axis" id="axis-y" marker-end="url(#ah-ink)" x1="70" x2="70" y1="640" y2="150" />
+      <text class="axislbl" id="axis-label" x="40" y="140">Density</text>
+    </g>
+    <g id="xticks" text-anchor="middle">
+      <text class="tick" id="tick-neg3" x="190" y="662">μ − 3σ</text>
+      <text class="tick" id="tick-neg2" x="380" y="662">μ − 2σ</text>
+      <text class="tick" id="tick-neg1" x="570" y="662">μ − σ</text>
+      <text class="tick" id="tick-mu" x="760" y="662">μ</text>
+      <text class="tick" id="tick-pos1" x="950" y="662">μ + σ</text>
+      <text class="tick" id="tick-pos2" x="1140" y="662">μ + 2σ</text>
+      <text class="tick" id="tick-pos3" x="1330" y="662">μ + 3σ</text>
+    </g>
+    <g id="ann-mean" text-anchor="middle">
+      <line class="lead-blue" id="mean-arrow" marker-end="url(#ah-blue)" x1="760" x2="760" y1="118" y2="176" />
+      <text class="lbl t-blue" id="mean-l1" x="760" y="52">1) Average μ</text>
+      <text class="lbl t-blue" id="mean-l2" x="760" y="86">(the mean)</text>
+    </g>
+    <g id="ann-sigma">
+      <line class="lead-purple" id="sigma-span" marker-end="url(#ah-purple)" marker-start="url(#ah-purple)" x1="763.74" x2="945.48" y1="362.05" y2="362.05" />
+      <text class="lbl t-purple" id="sigma-sym" text-anchor="middle" x="856.08" y="337.59">σ</text>
+      <text class="lbl t-purple" id="sigma-l1" text-anchor="middle" x="1215" y="196">2) σ  (sigma)</text>
+      <text class="lbl t-purple" id="sigma-l2" text-anchor="middle" x="1215" y="230">(standard deviation)</text>
+      <line class="lead-purple" id="sigma-callout" marker-end="url(#ah-purple)" x1="1215.46" x2="884.5" y1="252.17" y2="325.77" />
+    </g>
+    <g id="ann-1sigma" text-anchor="middle">
+      <line class="lead-blue" id="onesigma-span" marker-end="url(#ah-blue)" marker-start="url(#ah-blue)" x1="573.61" x2="946.39" y1="432" y2="432" />
+      <text class="lbl t-blue" id="onesigma-l1" x="760" y="472">3) 1σ interval</text>
+      <text class="lbl t-blue" id="onesigma-l2" x="760" y="504">≈ 68%</text>
+    </g>
+    <g id="ann-2sigma" text-anchor="middle">
+      <line class="lead-green" id="twosigma-span" marker-end="url(#ah-green)" marker-start="url(#ah-green)" x1="383.57" x2="1137.57" y1="540" y2="540" />
+      <text class="lbl t-green" id="twosigma-l1" x="760" y="580">4) 2σ interval</text>
+      <text class="lbl t-green" id="twosigma-l2" x="760" y="612">≈ 95.4%</text>
+    </g>
+    <g id="ann-95" text-anchor="middle">
+      <line class="lead-orange" id="ci-span" marker-end="url(#ah-orange)" marker-start="url(#ah-orange)" x1="391.02" x2="1128.37" y1="722" y2="722" />
+      <text class="tick t-orange" id="ci-left" text-anchor="end" x="326" y="730">μ − 1.96σ</text>
+      <text class="tick t-orange" id="ci-right" text-anchor="start" x="1194" y="730">μ + 1.96σ</text>
+      <text class="lbl t-orange" id="ci-l1" x="760" y="772">5) 95% interval = μ ± 1.96σ</text>
+      <text class="lbl t-orange" id="ci-l2" x="760" y="804">(also known as z = 1.96)</text>
+    </g>
+    <g id="box-mean" text-anchor="middle">
+      <rect class="box blue" height="244" id="box-mean-rect" rx="18" width="468" x="28" y="846" />
+      <text class="boxtitle t-blue" id="box-mean-title" x="262" y="892">Mean (μ)</text>
+      <svg height="101.08" id="formula-mean" overflow="visible" preserveAspectRatio="xMidYMid meet" style="color:#1f4fd6" viewBox="0 -1733 5940.8 2978.9" width="201.57" x="161.22" y="944.9">
+        <g fill="currentColor" id="formula-mean-1" stroke="currentColor" stroke-width="0" transform="scale(1 -1)">
+          <g data-mml-node="math" id="formula-mean-2">
+            <g data-mml-node="mi" id="formula-mean-3">
+              <path
+                d="M58 -216Q44 -216 34 -208T23 -186Q23 -176 96 116T173 414Q186 442 219 442Q231 441 239 435T249 423T251 413Q251 401 220 279T187 142Q185 131 185 107V99Q185 26 252 26Q261 26 270 27T287 31T302 38T315 45T327 55T338 65T348 77T356 88T365 100L372 110L408 253Q444 395 448 404Q461 431 491 431Q504 431 512 424T523 412T525 402L449 84Q448 79 448 68Q448 43 455 35T476 26Q485 27 496 35Q517 55 537 131Q543 151 547 152Q549 153 557 153H561Q580 153 580 144Q580 138 575 117T555 63T523 13Q510 0 491 -8Q483 -10 467 -10Q446 -10 429 -4T402 11T385 29T376 44T374 51L368 45Q362 39 350 30T324 12T288 -4T246 -11Q199 -11 153 12L129 -85Q108 -167 104 -180T92 -202Q76 -216 58 -216Z"
+                data-c="1D707"
+                id="formula-mean-4" />
+            </g>
+            <g data-mml-node="mo" id="formula-mean-5" transform="translate(880.8)">
+              <path
+                d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"
+                data-c="3D"
+                id="formula-mean-6" />
+            </g>
+            <g data-mml-node="mfrac" id="formula-mean-7" transform="translate(1936.6)">
+              <g data-mml-node="mn" id="formula-mean-8" transform="translate(414 676)">
+                <path
+                  d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"
+                  data-c="31"
+                  id="formula-mean-9" />
+              </g>
+              <g data-mml-node="mi" id="formula-mean-10" transform="translate(220 -686)">
+                <path
+                  d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"
+                  data-c="1D441"
+                  id="formula-mean-11" />
+              </g>
+              <rect height="60" id="formula-mean-12" width="1088" x="120" y="220" />
+            </g>
+            <g data-mml-node="munderover" id="formula-mean-13" transform="translate(3431.2)">
+              <g data-mml-node="mo" id="formula-mean-14">
+                <path
+                  d="M60 948Q63 950 665 950H1267L1325 815Q1384 677 1388 669H1348L1341 683Q1320 724 1285 761Q1235 809 1174 838T1033 881T882 898T699 902H574H543H251L259 891Q722 258 724 252Q725 250 724 246Q721 243 460 -56L196 -356Q196 -357 407 -357Q459 -357 548 -357T676 -358Q812 -358 896 -353T1063 -332T1204 -283T1307 -196Q1328 -170 1348 -124H1388Q1388 -125 1381 -145T1356 -210T1325 -294L1267 -449L666 -450Q64 -450 61 -448Q55 -446 55 -439Q55 -437 57 -433L590 177Q590 178 557 222T452 366T322 544L56 909L55 924Q55 945 60 948Z"
+                  data-c="2211"
+                  id="formula-mean-15" />
+              </g>
+              <g data-mjx-texclass="ORD" data-mml-node="TeXAtom" id="formula-mean-16" transform="translate(148.2 -1087.9)scale(.707)">
+                <g data-mml-node="mi" id="formula-mean-17">
+                  <path
+                    d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"
+                    data-c="1D456"
+                    id="formula-mean-18" />
+                </g>
+                <g data-mml-node="mo" id="formula-mean-19" transform="translate(345)">
+                  <path
+                    d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"
+                    data-c="3D"
+                    id="formula-mean-20" />
+                </g>
+                <g data-mml-node="mn" id="formula-mean-21" transform="translate(1123)">
+                  <path
+                    d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"
+                    data-c="31"
+                    id="formula-mean-22" />
+                </g>
+              </g>
+              <g data-mjx-texclass="ORD" data-mml-node="TeXAtom" id="formula-mean-23" transform="translate(408 1150)scale(.707)">
+                <g data-mml-node="mi" id="formula-mean-24">
+                  <path
+                    d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"
+                    data-c="1D441"
+                    id="formula-mean-25" />
+                </g>
+              </g>
+            </g>
+            <g data-mml-node="msub" id="formula-mean-26" transform="translate(5041.9)">
+              <g data-mml-node="mi" id="formula-mean-27">
+                <path
+                  d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"
+                  data-c="1D465"
+                  id="formula-mean-28" />
+              </g>
+              <g data-mml-node="mi" id="formula-mean-29" transform="translate(605 -150)scale(.707)">
+                <path
+                  d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"
+                  data-c="1D456"
+                  id="formula-mean-30" />
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </g>
+    <g id="box-sd" text-anchor="middle">
+      <rect class="box purple" height="244" id="box-sd-rect" rx="18" width="468" x="522" y="846" />
+      <text class="boxtitle t-purple" id="box-sd-title" x="756" y="892">Standard Deviation (σ)</text>
+      <svg height="124.19" id="formula-sd" overflow="visible" preserveAspectRatio="xMidYMid meet" style="color:#8e24aa" viewBox="0 -2218.8 9838.2 3660" width="333.8" x="589.1" y="937.34">
+        <g fill="currentColor" id="formula-sd-1" stroke="currentColor" stroke-width="0" transform="scale(1 -1)">
+          <g data-mml-node="math" id="formula-sd-2">
+            <g data-mml-node="mi" id="formula-sd-3">
+              <path
+                d="M184 -11Q116 -11 74 34T31 147Q31 247 104 333T274 430Q275 431 414 431H552Q553 430 555 429T559 427T562 425T565 422T567 420T569 416T570 412T571 407T572 401Q572 357 507 357Q500 357 490 357T476 358H416L421 348Q439 310 439 263Q439 153 359 71T184 -11ZM361 278Q361 358 276 358Q152 358 115 184Q114 180 114 178Q106 141 106 117Q106 67 131 47T188 26Q242 26 287 73Q316 103 334 153T356 233T361 278Z"
+                data-c="1D70E"
+                id="formula-sd-4" />
+            </g>
+            <g data-mml-node="mo" id="formula-sd-5" transform="translate(848.8)">
+              <path
+                d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"
+                data-c="3D"
+                id="formula-sd-6" />
+            </g>
+            <g data-mml-node="msqrt" id="formula-sd-7" transform="translate(1904.6)">
+              <g id="formula-sd-8" transform="translate(1056)">
+                <g data-mml-node="mfrac" id="formula-sd-9">
+                  <g data-mml-node="mn" id="formula-sd-10" transform="translate(414 676)">
+                    <path
+                      d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"
+                      data-c="31"
+                      id="formula-sd-11" />
+                  </g>
+                  <g data-mml-node="mi" id="formula-sd-12" transform="translate(220 -686)">
+                    <path
+                      d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"
+                      data-c="1D441"
+                      id="formula-sd-13" />
+                  </g>
+                  <rect height="60" id="formula-sd-14" width="1088" x="120" y="220" />
+                </g>
+                <g data-mml-node="munderover" id="formula-sd-15" transform="translate(1494.7)">
+                  <g data-mml-node="mo" id="formula-sd-16">
+                    <path
+                      d="M60 948Q63 950 665 950H1267L1325 815Q1384 677 1388 669H1348L1341 683Q1320 724 1285 761Q1235 809 1174 838T1033 881T882 898T699 902H574H543H251L259 891Q722 258 724 252Q725 250 724 246Q721 243 460 -56L196 -356Q196 -357 407 -357Q459 -357 548 -357T676 -358Q812 -358 896 -353T1063 -332T1204 -283T1307 -196Q1328 -170 1348 -124H1388Q1388 -125 1381 -145T1356 -210T1325 -294L1267 -449L666 -450Q64 -450 61 -448Q55 -446 55 -439Q55 -437 57 -433L590 177Q590 178 557 222T452 366T322 544L56 909L55 924Q55 945 60 948Z"
+                      data-c="2211"
+                      id="formula-sd-17" />
+                  </g>
+                  <g data-mjx-texclass="ORD" data-mml-node="TeXAtom" id="formula-sd-18" transform="translate(148.2 -1087.9)scale(.707)">
+                    <g data-mml-node="mi" id="formula-sd-19">
+                      <path
+                        d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"
+                        data-c="1D456"
+                        id="formula-sd-20" />
+                    </g>
+                    <g data-mml-node="mo" id="formula-sd-21" transform="translate(345)">
+                      <path
+                        d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"
+                        data-c="3D"
+                        id="formula-sd-22" />
+                    </g>
+                    <g data-mml-node="mn" id="formula-sd-23" transform="translate(1123)">
+                      <path
+                        d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"
+                        data-c="31"
+                        id="formula-sd-24" />
+                    </g>
+                  </g>
+                  <g data-mjx-texclass="ORD" data-mml-node="TeXAtom" id="formula-sd-25" transform="translate(408 1150)scale(.707)">
+                    <g data-mml-node="mi" id="formula-sd-26">
+                      <path
+                        d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"
+                        data-c="1D441"
+                        id="formula-sd-27" />
+                    </g>
+                  </g>
+                </g>
+                <g data-mml-node="mo" id="formula-sd-28" transform="translate(2938.7)">
+                  <path
+                    d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"
+                    data-c="28"
+                    id="formula-sd-29" />
+                </g>
+                <g data-mml-node="msub" id="formula-sd-30" transform="translate(3327.7)">
+                  <g data-mml-node="mi" id="formula-sd-31">
+                    <path
+                      d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"
+                      data-c="1D465"
+                      id="formula-sd-32" />
+                  </g>
+                  <g data-mml-node="mi" id="formula-sd-33" transform="translate(605 -150)scale(.707)">
+                    <path
+                      d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"
+                      data-c="1D456"
+                      id="formula-sd-34" />
+                  </g>
+                </g>
+                <g data-mml-node="mo" id="formula-sd-35" transform="translate(4448.8)">
+                  <path d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z" data-c="2212" id="formula-sd-36" />
+                </g>
+                <g data-mml-node="mi" id="formula-sd-37" transform="translate(5449.1)">
+                  <path
+                    d="M58 -216Q44 -216 34 -208T23 -186Q23 -176 96 116T173 414Q186 442 219 442Q231 441 239 435T249 423T251 413Q251 401 220 279T187 142Q185 131 185 107V99Q185 26 252 26Q261 26 270 27T287 31T302 38T315 45T327 55T338 65T348 77T356 88T365 100L372 110L408 253Q444 395 448 404Q461 431 491 431Q504 431 512 424T523 412T525 402L449 84Q448 79 448 68Q448 43 455 35T476 26Q485 27 496 35Q517 55 537 131Q543 151 547 152Q549 153 557 153H561Q580 153 580 144Q580 138 575 117T555 63T523 13Q510 0 491 -8Q483 -10 467 -10Q446 -10 429 -4T402 11T385 29T376 44T374 51L368 45Q362 39 350 30T324 12T288 -4T246 -11Q199 -11 153 12L129 -85Q108 -167 104 -180T92 -202Q76 -216 58 -216Z"
+                    data-c="1D707"
+                    id="formula-sd-38" />
+                </g>
+                <g data-mml-node="msup" id="formula-sd-39" transform="translate(6052.1)">
+                  <g data-mml-node="mo" id="formula-sd-40">
+                    <path
+                      d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"
+                      data-c="29"
+                      id="formula-sd-41" />
+                  </g>
+                  <g data-mml-node="mn" id="formula-sd-42" transform="translate(422 289)scale(.707)">
+                    <path
+                      d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"
+                      data-c="32"
+                      id="formula-sd-43" />
+                  </g>
+                </g>
+              </g>
+              <g data-mml-node="mo" id="formula-sd-44" transform="translate(0 -391.2)">
+                <path
+                  d="M702 589Q706 601 718 605H1061Q1076 597 1076 585Q1076 572 1061 565H742V0Q734 -14 724 -14H722H720Q708 -14 702 0V589Z"
+                  data-c="E001"
+                  id="formula-sd-45"
+                  transform="translate(0 1945)" />
+                <path
+                  d="M742 -871Q740 -873 737 -876T733 -880T730 -882T724 -884T714 -885H702L222 569L180 484Q138 399 137 399Q131 404 124 412L111 425L265 736L702 -586V168L703 922Q713 935 722 935Q734 935 742 920V-871Z"
+                  data-c="23B7"
+                  id="formula-sd-46"
+                  transform="translate(0 -165)" />
+                <svg height="1361" id="formula-sd-47" viewBox="0 295.5 1056 1361" width="1056" x="0" y="670">
+                  <path d="M722 -14H720Q708 -14 702 0V306L703 612Q713 625 722 625Q734 625 742 610V0Q734 -14 724 -14H722Z" data-c="E000" id="formula-sd-48" transform="scale(1 3.195)" />
+                </svg>
+              </g>
+              <rect height="60" id="formula-sd-49" width="6877.6" x="1056" y="2098.8" />
+            </g>
+          </g>
+        </g>
+      </svg>
+    </g>
+    <g id="box-eqv" text-anchor="middle" transform="translate(1016 846)">
+      <rect class="box blue" height="244" id="box-eqv-rect" rx="18" width="476" x="0" y="0" />
+      <text class="eqv-hd t-blue" id="box-eqv-t1" x="238" y="34">3 ways to depict</text>
+      <text class="eqv-hd t-blue" id="box-eqv-t2" x="238" y="58">the 95% interval</text>
+      <path class="eqv-tie" d="M 136.01 68 L 136.01 122" id="eqv-tie-l1" />
+      <path class="eqv-tie" d="M 339.99 68 L 339.99 122" id="eqv-tie-r1" />
+      <path class="eqv-tie" d="M 136.01 130 L 136.01 178" id="eqv-tie-l2" />
+      <path class="eqv-tie" d="M 339.99 130 L 339.99 178" id="eqv-tie-r2" />
+      <path class="eqv-tie" d="M 136.01 186 L 136.01 217" id="eqv-tie-l3" />
+      <path class="eqv-tie" d="M 339.99 186 L 339.99 217" id="eqv-tie-r3" />
+      <path
+        class="eqv-f95"
+        d="M 136.01 109.08 C 138.13 108.27 144.51 105.99 148.76 104.25 C 153.01 102.52 157.26 100.6 161.51 98.64 C 165.76 96.69 170.01 94.57 174.26 92.53 C 178.51 90.48 182.76 88.33 187 86.35 C 191.25 84.37 195.5 82.38 199.75 80.66 C 204 78.95 208.25 77.32 212.5 76.05 C 216.75 74.78 221 73.72 225.25 73.05 C 229.5 72.37 233.75 72 238 72 C 242.25 72 246.5 72.37 250.75 73.05 C 255 73.72 259.25 74.78 263.5 76.05 C 267.75 77.32 272 78.95 276.25 80.66 C 280.5 82.38 284.75 84.37 289 86.35 C 293.24 88.33 297.49 90.48 301.74 92.53 C 305.99 94.57 310.24 96.69 314.49 98.64 C 318.74 100.6 322.99 102.52 327.24 104.25 C 331.49 105.99 337.87 108.27 339.99 109.08 L 339.99 122 L 136.01 122 Z"
+        id="eqv-r1-fill" />
+      <path
+        class="eqv-cv"
+        d="M 58.2 121.25 C 62.85 120.96 76.8 120.52 86.1 119.51 C 95.4 118.51 104.7 117.33 114 115.23 C 123.3 113.14 132.6 110.38 141.9 106.96 C 151.2 103.54 160.5 98.94 169.8 94.7 C 179.1 90.46 188.4 85.14 197.7 81.52 C 207 77.9 216.3 74.32 225.6 72.99 C 234.9 71.66 244.2 71.89 253.5 73.54 C 262.8 75.18 272.1 79.09 281.4 82.86 C 290.7 86.64 300 91.98 309.3 96.19 C 318.6 100.4 327.9 104.82 337.2 108.1 C 346.5 111.38 355.8 113.93 365.1 115.88 C 374.4 117.84 383.7 118.89 393 119.8 C 402.3 120.71 416.25 121.1 420.9 121.36"
+        id="eqv-r1-curve" />
+      <path class="eqv-ax" d="M 50.2 122 L 425.8 122" id="eqv-r1-axis" />
+      <path
+        class="eqv-ftl"
+        d="M 58.2 177.25 L 62.09 177.11 L 65.98 176.93 L 69.87 176.73 L 73.76 176.5 L 77.65 176.24 L 81.54 175.93 L 85.43 175.58 L 89.32 175.18 L 93.21 174.73 L 97.1 174.22 L 101 173.65 L 104.89 173.01 L 108.78 172.3 L 112.67 171.52 L 116.56 170.66 L 120.45 169.71 L 124.34 168.69 L 128.23 167.57 L 132.12 166.37 L 136.01 165.08 L 136.01 178 L 58.2 178 Z"
+        id="eqv-r2-tail-l" />
+      <path
+        class="eqv-ftl"
+        d="M 339.99 165.08 L 343.88 166.37 L 347.77 167.57 L 351.66 168.69 L 355.55 169.71 L 359.44 170.66 L 363.33 171.52 L 367.22 172.3 L 371.11 173.01 L 375 173.65 L 378.89 174.22 L 382.79 174.73 L 386.68 175.18 L 390.57 175.58 L 394.46 175.93 L 398.35 176.24 L 402.24 176.5 L 406.13 176.73 L 410.02 176.93 L 413.91 177.11 L 417.8 177.25 L 417.8 178 L 339.99 178 Z"
+        id="eqv-r2-tail-r" />
+      <path
+        class="eqv-cv"
+        d="M 58.2 177.25 C 62.85 176.96 76.8 176.52 86.1 175.51 C 95.4 174.51 104.7 173.33 114 171.23 C 123.3 169.14 132.6 166.38 141.9 162.96 C 151.2 159.54 160.5 154.94 169.8 150.7 C 179.1 146.46 188.4 141.14 197.7 137.52 C 207 133.9 216.3 130.32 225.6 128.99 C 234.9 127.66 244.2 127.89 253.5 129.54 C 262.8 131.18 272.1 135.09 281.4 138.86 C 290.7 142.64 300 147.98 309.3 152.19 C 318.6 156.4 327.9 160.82 337.2 164.1 C 346.5 167.38 355.8 169.93 365.1 171.88 C 374.4 173.84 383.7 174.89 393 175.8 C 402.3 176.71 416.25 177.1 420.9 177.36"
+        id="eqv-r2-curve" />
+      <path class="eqv-ax" d="M 50.2 178 L 425.8 178" id="eqv-r2-axis" />
+      <path class="eqv-eb" d="M 136.01 204 L 339.99 204" id="eqv-r3-bar" />
+      <path class="eqv-eb" d="M 136.01 193 L 136.01 215" id="eqv-r3-cap-l" />
+      <path class="eqv-eb" d="M 339.99 193 L 339.99 215" id="eqv-r3-cap-r" />
+      <circle cx="238" cy="204" fill="#1f4fd6" id="eqv-r3-dot" r="5" />
+      <path class="eqv-warn" d="M 117.7 220.6 L 125.6 234 L 109.8 234 Z" id="box-eqv-warn" />
+      <path class="eqv-warn-mark" d="M 117.7 225 L 117.7 229.6" id="box-eqv-warn-bar" />
+      <circle class="eqv-warn-dot" cx="117.7" cy="231.8" id="box-eqv-warn-dot" r=".95" />
+      <text class="eqv-note" id="box-eqv-note" x="248.5" y="234">sketches — not always to scale</text>
+    </g>
+  </g>
+</svg>

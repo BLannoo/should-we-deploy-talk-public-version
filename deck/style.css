@@ -1,0 +1,221 @@
+@import "./brand.css";
+
+/* Native title (cover) */
+.slidev-layout.cover h1 {
+  color: var(--deck-ink);
+  font-weight: 700;
+}
+.slidev-layout.cover h1 + p {
+  opacity: 0.75;
+}
+/* Brand accent bar under the cover title */
+.slidev-layout.cover h1::after {
+  content: "";
+  display: block;
+  width: 6em;
+  height: 6px;
+  margin-top: 0.4em;
+  border-radius: 3px;
+  background: var(--deck-gradient);
+}
+
+/* Native section divider */
+.slidev-layout.section h1 {
+  color: var(--deck-ink);
+}
+.slidev-layout.section {
+  border-left: 10px solid transparent;
+  border-image: var(--deck-gradient) 1;
+}
+
+/* Pause checkpoint */
+.slidev-layout.checkpoint h1 { color: var(--deck-ink); }
+.slidev-layout.checkpoint h2 {
+  margin-top: 1.2em;
+  color: var(--deck-secondary);
+}
+.slidev-layout.checkpoint strong { color: var(--deck-ink); }
+/* "Where we are" list, rendered from outline.ts by deck/components/SectionCheckpoint.vue.
+   Replaces the hand-written markdown list that had drifted from the footer's names. */
+.slidev-layout.checkpoint .section-checkpoint { margin: 0; padding: 0; list-style: none; }
+.slidev-layout.checkpoint .section-checkpoint li {
+  display: flex;
+  gap: 0.45em;
+  line-height: 1.7;
+}
+.slidev-layout.checkpoint .section-checkpoint__mark {
+  width: 1em;
+  flex: none;
+  text-align: center;
+}
+.slidev-layout.checkpoint .section-checkpoint .is-current {
+  color: var(--deck-primary);
+  font-weight: 700;
+}
+
+/* Closing slide's robot. Absolutely positioned so it sits outside the centred
+   checkpoint flow and cannot shift the text: `layout: center` measures its content
+   box, and an image in that flow would re-centre everything around it. Bottom-right,
+   clear of the footer strip, and `pointer-events: none` so it never eats a click on
+   the slide. The asset lives in the slide's own folder rather than in
+   `deck/assets/figures/`, which is for illustrations SHARED by more than one figure. */
+.slidev-layout.closing { position: relative; }
+.slidev-layout.closing .closing-bot {
+  position: absolute;
+  right: 2.2rem;
+  bottom: calc(var(--deck-footer-h) + 0.6rem);
+  height: 13rem;
+  width: auto;
+  pointer-events: none;
+}
+
+/* Closing slide's QR, and the deck's only one. This is the placement that gets scanned:
+   it is on screen for the whole Q&A, which is when the room reaches for a phone.
+
+   Bottom-LEFT, because the waving robot owns bottom-right. Absolutely positioned like the
+   robot, so it sits outside the centred checkpoint flow and cannot shift the text: `layout:
+   center` measures its content box, and an element in that flow would re-centre everything
+   around it.
+
+   The heading beside it, "Questions? — Thank you", is LEFT-aligned in a centred column,
+   so its first glyph sits at a fixed offset the code has to clear. The code's white
+   quiet-zone background is opaque, so an overlap hides the glyph completely rather than
+   just crowding it — it read as a missing "Q". Clearance is 1.9rem: 1.4 from moving left
+   and 0.5 from the narrower code.
+
+   Fixing it here rather than by padding the column is deliberate. Slidev transform-scales
+   the slide, so padding measured in rem is absorbed by the centred grid and moves the text
+   by less than it should, and reserving enough to be sure wraps the checkpoint list. The
+   code and the text scale by the same transform, so a rem-sized gap between them holds at
+   every window size — checked at four.
+
+   The size is a floor, not a preference: a phone reads a QR from roughly 10x its width,
+   so at 11rem the code renders ~30 cm on a 2 m screen and scans from ~3 m. Shrink it
+   further to fit something else in and it stops scanning, which fails silently because a
+   code too small to read still looks exactly like a code. */
+.slidev-layout.closing .closing-qr {
+  position: absolute;
+  left: 1.2rem;
+  bottom: calc(var(--deck-footer-h) + 1.1rem);
+  text-align: center;
+  pointer-events: none;
+}
+.slidev-layout.closing .closing-qr img { width: 11rem; height: auto; display: block; }
+.slidev-layout.closing .closing-qr strong {
+  display: block;
+  margin-top: 0.4em;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #8895b1;
+}
+
+/* Agenda */
+.slidev-layout.agenda h1 { color: var(--deck-ink); }
+/* The statistics term for each question, trailing it on the SAME LINE. The pair
+   addresses two halves of the room and the order is the message: the business question
+   is what the talk is for and what most people should carry away; the field name is a
+   handle for the few who want to search it or take it to their own LLM afterwards. It
+   is small, muted and in the deck's mono, which reads as an identifier rather than as a
+   second headline - the size and colour carry the hierarchy, so the shared line costs
+   nothing. Setting the term BEHIND the question was tried and is wrong twice over: it
+   overlaps the words it supports, and equal weight in the same space implies the two
+   are alternatives rather than a claim and its label. */
+.slidev-layout.agenda ol > li { margin: 0.55em 0; }
+.slidev-layout.agenda .term {
+  margin-left: 0.9em;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.5em;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: #8895b1;
+  white-space: nowrap;
+}
+.slidev-layout.agenda .agenda-roadmap {
+  margin-top: 1.4em;
+  font-weight: 600;
+  color: var(--deck-secondary);
+}
+/* Agenda section list, rendered from outline.ts by deck/components/SectionRoadmap.vue. */
+.slidev-layout.agenda .section-roadmap {
+  margin: 0.35em 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 1.1em;
+  flex-wrap: wrap;
+}
+.slidev-layout.agenda .section-roadmap__no { color: var(--deck-primary); }
+
+/* Progress footer: reserve a bottom strip so contained images don't overlap it. */
+:root { --deck-footer-h: 3.2rem; }
+
+.slidev-layout.flatimg {
+  padding-bottom: var(--deck-footer-h);
+  background-origin: content-box;
+}
+
+/* Full-bleed figure slides (ADR-002 layout amendment).
+   The figure is an inline markdown image, not a `layout: image` background, so it
+   can be co-located with its slide and resolved by Vite. Reserves the footer strip
+   so the image never overlaps it. */
+.slidev-layout.figfull { padding-bottom: var(--deck-footer-h); display: flex; position: relative; }
+/* Pairs with `footer: false` in a slide's frontmatter: with no footer strip rendered there
+   is nothing to reserve room for, and the figure takes the full slide height. Setting one
+   without the other either crops the figure behind the strip or leaves a dead band. */
+.slidev-layout.figfull.nofooter { padding-bottom: 0; }
+.slidev-layout.figfull > p { margin: 0; flex: 1; min-height: 0; }
+.slidev-layout.figfull img { width: 100%; height: 100%; object-fit: contain; }
+
+/* A figure that exists but does not yet fit the arc it plays in: the real figure renders so the
+   flow reads naturally, and the banner states what must change. The full instructions live in
+   that folder's `image-prompt.md`. Absolutely positioned, so it is outside `figfull`'s flex flow
+   and never resizes the figure. The background is a near-opaque warm tint, not a transparent
+   wash: it sits directly over the figure's own content (e.g. a caption), and a bannered figure
+   is being reworked anyway, so covering a sliver of it for the sake of legible banner text is an
+   acceptable trade. */
+.slidev-layout.figfull .rework {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: var(--deck-footer-h);
+  z-index: 10;
+  padding: 0.35em 0.9em;
+  font-size: 0.62em;
+  font-weight: 600;
+  color: #7a3b00;
+  background: #fdf0e3;
+  border-top: 2px solid var(--deck-marker);
+}
+
+/* Provisional slides: a slide whose figure does not exist yet, so the folder carries
+   `image-prompt.md` where `figure.svg` would go. The card states the intended headline and the
+   slide's one message, so the arc reads end to end before any image exists. Reserves the footer
+   strip like `figfull` does. */
+.slidev-layout.placeholder {
+  padding-bottom: var(--deck-footer-h);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.slidev-layout.placeholder h1 { color: var(--deck-ink); }
+.slidev-layout.placeholder .todo {
+  align-self: flex-start;
+  margin-bottom: 0.9em;
+  padding: 0.2em 0.7em;
+  border-radius: 999px;
+  font-size: 0.62em;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  color: #fff;
+  background: var(--deck-marker);
+}
+.slidev-layout.placeholder .prompt-ref {
+  margin-top: 1.4em;
+  font-size: 0.72em;
+  opacity: 0.65;
+}
+
+/* A stepped figure slide: `FigureReveal` inlines the SVG into a shadow root rather than
+   emitting the `<img>` that `![](./figure.svg)` would, so it needs the same flex sizing
+   the `figfull > p` rule gives the image wrapper. */
+.slidev-layout.figfull > .figure-reveal { flex: 1; min-height: 0; }

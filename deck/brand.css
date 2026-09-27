@@ -1,0 +1,21 @@
+/* A palette that belongs to the deck rather than to a company: navy ink with a blue
+   accent. Every value here is already used by the figures, so the chrome and the
+   figures finally agree — `#1f4fd6` appears in 24 of the 29 figures and `#16233f` is
+   their ink.
+
+   The ink/primary split matters here: a near-black navy is right for a heading but
+   reads as plain bold in the 12px footer beside its grey siblings, which would lose
+   the cue that marks where we are. Navy heads, blue accents.
+
+   Green `#1b7f3b` and red `#d32f2f` are deliberately absent. They are the deck's
+   verdict colours — deploy / don't, significant / not — and chrome in a verdict
+   colour reads as a verdict. */
+:root {
+  --deck-ink:       #16233f;
+  --deck-primary:   #1f4fd6;
+  --deck-secondary: #45506a;
+  --deck-marker:    #8a6d3b;
+  --deck-gradient:  linear-gradient(120deg, #16233f, #1f4fd6);
+  --deck-footer-mark: "Bruno Lannoo";
+  --slidev-theme-primary: var(--deck-primary);
+}

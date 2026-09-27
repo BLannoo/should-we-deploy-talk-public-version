@@ -1,0 +1,3 @@
+# The deck's own build output is ignored by deck/.gitignore. This covers the rest.
+.DS_Store
+node_modules/
