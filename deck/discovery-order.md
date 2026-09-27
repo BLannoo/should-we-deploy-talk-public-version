@@ -19,7 +19,7 @@ export:
   format: pdf
   dark: false
   withClicks: false
-src: ./slides/00_title.md
+src: ./slides/00_title/slide.md
 ---
 
 <!--

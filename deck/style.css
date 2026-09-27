@@ -19,6 +19,34 @@
   background: var(--deck-gradient);
 }
 
+/* The opening slide's QR, the same code as the closing slide's. This is the placement
+   that actually gets used: it is on screen while the room settles, when phones are still
+   out and looking down costs nobody anything. The closing slide carries it again for
+   whoever decides later.
+
+   Bottom-right, and the cover is the one layout with no footer strip (`slide-bottom.vue`
+   renders nothing when `isCover`), so the whole bottom band is free here — no reserved
+   height to work around and nothing to collide with but the title block above.
+
+   Same 11rem floor as the closing slide: a projected code is read from seats, so the size
+   is set by scan distance rather than by taste. */
+.slidev-layout.cover { position: relative; }
+.slidev-layout.cover .cover-qr {
+  position: absolute;
+  right: 2.4rem;
+  bottom: 2.4rem;
+  text-align: center;
+  pointer-events: none;
+}
+.slidev-layout.cover .cover-qr img { width: 11rem; height: auto; display: block; }
+.slidev-layout.cover .cover-qr strong {
+  display: block;
+  margin-top: 0.4em;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #8895b1;
+}
+
 /* Native section divider */
 .slidev-layout.section h1 {
   color: var(--deck-ink);
